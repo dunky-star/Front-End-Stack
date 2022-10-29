@@ -1,0 +1,9 @@
+.idea/
+*.iml
+out/
+secret.txt
+.metadata
+Servers/
+/build/
+.settings/
+.lib/

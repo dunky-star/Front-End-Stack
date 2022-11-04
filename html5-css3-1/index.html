@@ -12,16 +12,25 @@
         <title>dunky 2022 full stack Java developer</title>
         <link rel="icon" href="img/icon.png">
 
+        <!-- Styling css-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
     </head>
     
     <body>
-        <header>Header</header>
+        <header>
+            <div id="Logo">Logo-tip</div>
+        </header>
 
         <nav>Navigation bar</nav>
 
         <section>Principal section.</section>
 
-        <aside>Column</aside>
+        <aside>
+            <div class="news">New 1</div>
+            <div class="news">New 2</div>
+            <div class="news">New 3</div>
+        </aside>
         <article>To write article inside the page.</article>
         <h1> Header 1 </h1>
         <h2> Header 2 </h2>
@@ -81,17 +90,29 @@
         <p> BMW <progress value="45" min="0" max="100" ></progress></p>
         <p> Nissan GTR <progress value="97" min="0" max="100"></progress></p>
 
-        <audio autoplay control loop preload="auto">
+        <audio controls loop preload="metadata">
+            <!-- Ogg VORBIS .ogg-->
+            <!-- MP3 .mp3-->
+            <!-- WAV .wav-->
+            <!-- ACC .m4a, .m4b, .m4p, .mp4, .acc -->
             <source src="audio/audio.m4a" type="audio/mp4">
             <source src="audio/audio.mp3" type="audio/mp4">
             <source src="audio/audio.ogg" type="audio/mp4">
         </audio>
 
-        <video autoplay control loop width="500" height="20 0">
+        <video controls loop preload="metadata" width="500" height="200">
+            <!-- OGG .ogg-->
+            <!-- MP4 .mp4-->
+            <!-- WEBM .webm -->
             <source src="video/video.mp4" type="video/mp4">
             <source src="video/video.ogv" type="video/ogg">
-            <source src="video/video.webm" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
         </video>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.731041509427!2d32.624768890546875!3d0.3789800327629336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbeccaaf42bb%3A0xab642aa8701d6529!2sPlatinum%20Gym%20(Home%20of%20Fitness)!5e0!3m2!1sen!2sug!4v1667546066518!5m2!1sen!2sug"
+        width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <footer>This is a footer.</footer>
     </body>

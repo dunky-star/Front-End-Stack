@@ -122,7 +122,6 @@ section {
 	margin: auto;
 	width: 1000px;
 	height: 453px;
-	background: #aaa;
 }
 
 aside#left {
@@ -131,8 +130,17 @@ aside#left {
 	top: 0;
 	width: 200px;
 	height: 453px;
-	background: #381F1E;
+}
 
+aside#left ul li {
+
+	background: #381F1E;
+	padding: 10px;
+	margin: 2px 10px;
+	list-style: square;
+	list-style-position: inside;
+	list-style-image: url(img/list.png);
+	color: #fff;
 }
 
 article {

@@ -9,6 +9,7 @@ body{
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-family: sans-serif;
 }
 
 header{
@@ -16,7 +17,7 @@ header{
 	margin: 20px auto;
 	width: 1000px;
 	height: 120px;
-	background: #381F1E;
+	
 }
 
 #logo {
@@ -26,6 +27,10 @@ header{
 	width: 200px;
 	height: 60px;
 	background: #fff;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	text-align: center;
+	line-height: 60px;
 }
 
 .social {
@@ -33,21 +38,27 @@ header{
 	width: 42px;
 	height: 42px;
 	border-radius: 100%;
-	background: #fff;
+	background: #888;
+	text-align: center;
+	line-height: 42px;
+	color: #fff;
 }
 
 #icon1 {
 	top: 42px;
 	right: 120px;
+	background-color: blue;
 }
 
 #icon2 {
 	top: 42px;
 	right: 71px;
+	background: green;
 }
 #icon3 {
 	top: 42px;
 	right: 19px;
+	background: red;
 }
 
 nav {
@@ -64,6 +75,10 @@ nav {
 	height: 48px;
 	margin: 0px 2px;
 	background: #aaa;
+	font-family: 'Kaushan Script', cursive;
+	text-align: center;
+	color: #381F1E;
+	line-height: 48px;
 }
 
 #top {
@@ -71,7 +86,7 @@ nav {
 	margin: 20px auto;
 	width: 1000px;
 	height: 192px;
-	background: #888;
+
 }
 
 #top ul {
@@ -83,9 +98,23 @@ nav {
 	float: left;
 	width: 326px;
 	height: 192px;
-	background: #381F1E;
 	margin-right: 10px;
+	text-align: center;
 
+}
+
+#top ul li img {
+    border-radius: 50%;
+	height: 100px;
+}
+
+#top ul li h1 {
+	font-family: 'Kaushan Script', cursive;
+}
+
+#top ul li p {
+	font-size: 14px;
+	margin: 10px;
 }
 
 section {
@@ -102,7 +131,7 @@ aside#left {
 	top: 0;
 	width: 200px;
 	height: 453px;
-	background: #333;
+	background: #381F1E;
 
 }
 
@@ -115,13 +144,32 @@ article {
 	background: #666;
 }
 
+article h1 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	margin: 20px;
+	color: #fff;
+}
+
+article p img {
+	float: left;
+	margin-right: 20px;
+}
+
+article p {
+	margin: 5px 20px;
+	font-size: 14px;
+	text-align: justify;
+	color: #fff;
+}
+
 aside#right {
 	position: absolute;
 	right: 0;
 	top: 0;
 	width: 200px;
 	height: 453px;
-	background: #333;
+	background: #381F1E;
 }
 
 footer {
@@ -130,4 +178,7 @@ footer {
 	width: 1000px;
 	height: 70px;
 	background: #888;
+	color: white;
+	text-align: center;
+	line-height: 70px;
 }

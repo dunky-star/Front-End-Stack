@@ -16,13 +16,53 @@ header{
 	margin: 20px auto;
 	width: 1000px;
 	height: 120px;
-	background: #444;
+	background: #381F1E;
 }
+
+#logo {
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	width: 200px;
+	height: 60px;
+	background: #fff;
+}
+
+.social {
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	background: #fff;
+}
+
+#icon1 {
+	top: 42px;
+	right: 120px;
+}
+
+#icon2 {
+	top: 42px;
+	right: 71px;
+}
+#icon3 {
+	top: 42px;
+	right: 19px;
+}
+
 nav {
 	position: relative;
 	margin: auto;
 	width: 1000px;
 	height: 48px;
+	background: #fff;
+}
+
+.buttons {
+	float: left;
+	width: 196px;
+	height: 48px;
+	margin: 0px 2px;
 	background: #aaa;
 }
 
@@ -34,10 +74,60 @@ nav {
 	background: #888;
 }
 
+#top ul {
+	width: 1012px;
+	height: 192px;
+}
+
+#top ul li {
+	float: left;
+	width: 326px;
+	height: 192px;
+	background: #381F1E;
+	margin-right: 10px;
+
+}
+
 section {
 	position: relative;
 	margin: auto;
 	width: 1000px;
 	height: 453px;
 	background: #aaa;
+}
+
+aside#left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 453px;
+	background: #333;
+
+}
+
+article {
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 600px;
+	height: 453px;
+	background: #666;
+}
+
+aside#right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+	height: 453px;
+	background: #333;
+}
+
+footer {
+	position: relative;
+	margin: 20px auto;
+	width: 1000px;
+	height: 70px;
+	background: #888;
 }

@@ -12,6 +12,22 @@ body{
 	font-family: sans-serif;
 }
 
+#chat {
+	position: fixed;
+	width: 250px;
+	height: 40px;
+	background: darkolivegreen;
+	bottom: 0;
+	right: 10px;
+	z-index: 1;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 20px 20px 0 0;
+	cursor: pointer;
+	font-family: 'Kaushan Script', cursive;
+}
+
 header{
 	position: relative;
 	margin: 20px auto;
@@ -77,8 +93,16 @@ nav {
 	background: #aaa;
 	font-family: 'Kaushan Script', cursive;
 	text-align: center;
-	color: #381F1E;
+	color: #fff;
 	line-height: 48px;
+}
+
+a .buttons:hover {
+	background: #381F1E;
+}
+
+a .buttons:active {
+	background: rgb(134, 184, 42);
 }
 
 #top {
@@ -186,7 +210,7 @@ aside#right h1 {
 	text-align: center;
 	background: #381F1E;
 	color: white;
-	margin: 0px 3px 5px;
+	margin: 0px 3px 10px;
 }
 
 aside#right input {

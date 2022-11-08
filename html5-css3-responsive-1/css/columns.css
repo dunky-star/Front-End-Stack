@@ -1,0 +1,61 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box; /* This makes sure border and fill are included inside the width and height of the box */
+}
+
+.container{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height: auto;
+}
+
+.row{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height: auto;
+	/*Columns inside the row are floating left, so they are outside page flow
+	and other elements will be positioned like if there were no columns.
+	To avoid this, we will add the property clear both that clears the flow both sides*/
+	clear:both;
+	display:table;
+}
+
+[class*="col-"]{
+	float:left;
+	border:1px transparent black;
+	padding:20px;
+}
+
+/*The columns total is 12, just so you know the size of the other 11 we must make a rule of three: n*100 / 12; */
+
+.col-12{width:100%;}
+
+.col-11{width:91.66666667%;}
+
+.col-10{width:83.33333333%;}
+
+.col-9{width:75%;}
+
+.col-8{width:66.66666667%;}
+
+.col-7{width:58.33333333%;}
+
+.col-6{width:50%;}
+
+.col-5{width:41.66666667%;}
+
+.col-4{width: 33.33333333%;}
+
+.col-3{width: 25%;}
+
+.col-2 {width: 16.66666667%;}
+
+.col-1 {width: 8.33333333%;}
+
+

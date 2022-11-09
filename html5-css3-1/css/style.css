@@ -131,6 +131,12 @@ SECTION 4
 	font-family: 'Kaushan Script', cursive;
 	font-size: 40px;
 	margin: 20px;
+	color: #fff;
+}
+
+#section4 article {
+	background: #666;
+	margin: 2px 0;
 }
 
 #section4 article p img {
@@ -142,6 +148,7 @@ SECTION 4
 	margin: 5px 20px;
 	font-size: 14px;
 	text-align: justify;
+	color:#fff;
 }
 
 #section4 aside#right h1 {

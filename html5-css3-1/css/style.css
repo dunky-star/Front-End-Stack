@@ -1,145 +1,119 @@
-body{
-    font-size: 14px;
-    color: #333;
-    background-color: #fff;
-    letter-spacing: 1px;  
-}
-
 *{
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 	list-style: none;
 	font-family: sans-serif;
+	box-sizing: border-box;
+	letter-spacing: 1px;
 }
 
-#chat {
-	position: fixed;
-	width: 250px;
-	height: 40px;
-	background: darkolivegreen;
-	bottom: 0;
-	right: 10px;
-	z-index: 1;
-	color: white;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 20px 20px 0 0;
-	cursor: pointer;
-	font-family: 'Kaushan Script', cursive;
-}
-
-header{
+.container {
 	position: relative;
-	margin: 20px auto;
-	width: 1000px;
-	height: 120px;
-	
+	margin: auto;
+	width: 100%;
+	height: auto;
 }
 
-#logo {
-	position: absolute;
-	left: 30px;
-	top: 30px;
-	width: 200px;
-	height: 60px;
-	background: #fff;
+.row {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: table;
+}
+
+[class*="col-"] {
+	float: left;
+	/*border:1px solid black;*/
+	padding: 10px;
+}
+
+/*=============================================
+SECTION 1
+=============================================*/
+
+header #logo {
 	font-family: 'Kaushan Script', cursive;
-	font-size: 40px;
+	font-size: 50px;
 	text-align: center;
 	line-height: 60px;
 }
 
-.social {
-	position: absolute;
-	width: 42px;
-	height: 42px;
-	border-radius: 100%;
-	background: #888;
+header center p {
 	text-align: center;
+	width: 42px;
 	line-height: 42px;
-	color: #fff;
+	border-radius: 100%;
+	background: #ccc;
+	color: white;
 }
 
-#icon1 {
-	top: 42px;
-	right: 120px;
-	background-color: blue;
+header center#icon1 p {
+	background: blue;
 }
 
-#icon2 {
-	top: 42px;
-	right: 71px;
+header center#icon2 p {
 	background: green;
 }
-#icon3 {
-	top: 42px;
-	right: 19px;
+
+header center#icon3 p {
 	background: red;
 }
 
-nav {
-	position: relative;
-	margin: auto;
-	width: 1000px;
-	height: 48px;
-	background: #fff;
+
+/*=============================================
+SECTION 2
+=============================================*/
+
+nav ul li {
+	padding: 10px;
+	text-align: center;
 }
 
-.buttons {
-	float: left;
-	width: 196px;
-	height: 48px;
-	margin: 0px 2px;
+nav ul li a {
+	display: block;
 	background: #aaa;
 	font-family: 'Kaushan Script', cursive;
-	text-align: center;
-	color: #fff;
+	color: white;
 	line-height: 48px;
 }
-
-a .buttons:hover {
+nav ul li a:hover {
 	background: #381F1E;
 }
 
-a .buttons:active {
+nav ul li a:active {
 	background: rgb(134, 184, 42);
 }
 
-#top {
-	position: relative;
-	margin: 20px auto;
-	width: 1000px;
-	height: 192px;
-
+/*=============================================
+SECTION 3
+=============================================*/
+#section3 center {
+	padding: 20px;
 }
 
-#top ul {
-	width: 1012px;
-	height: 192px;
+#section3 img {
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
 }
 
-#top ul li {
-	float: left;
-	width: 326px;
-	height: 192px;
-	margin-right: 10px;
-	text-align: center;
-
-}
-
-#top ul li img {
-    border-radius: 50%;
-	height: 100px;
-}
-
-#top ul li h1 {
+#section3 h1 {
 	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	padding: 10px;
 }
 
-#top ul li p {
-	font-size: 14px;
-	margin: 10px;
+#section3 p {
+	padding: 10px;
 }
+
+/*=============================================
+SECTION 4
+=============================================*/
 
 section {
 	position: relative;
@@ -239,7 +213,25 @@ aside#right input[type="submit"] {
 	border: 0;
 }
 
+#chat {
+	position: fixed;
+	width: 250px;
+	height: 40px;
+	background: darkolivegreen;
+	bottom: 0;
+	right: 10px;
+	z-index: 1;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 20px 20px 0 0;
+	cursor: pointer;
+	font-family: 'Kaushan Script', cursive;
+}
 
+/*=============================================
+SECTION 5
+=============================================*/
 footer {
 	position: relative;
 	margin: 20px auto;
@@ -250,3 +242,262 @@ footer {
 	text-align: center;
 	line-height: 70px;
 }
+
+/*=============================================
+Media Query
+DESKTOP SCREEN SIZE - LARGE (lg) - We check in laptop and PC
+=============================================*/
+
+@media(min-width:1200px) {
+
+	.col-lg-12 {
+		width: 100%;
+	}
+
+	.col-lg-11 {
+		width: 91.66666667%;
+	}
+
+	.col-lg-10 {
+		width: 83.33333333%;
+	}
+
+	.col-lg-9 {
+		width: 75%;
+	}
+
+	.col-lg-8 {
+		width: 66.66666667%;
+	}
+
+	.col-lg-7 {
+		width: 58.33333333%;
+	}
+
+	.col-lg-6 {
+		width: 50%;
+	}
+
+	.col-lg-5 {
+		width: 41.66666667%;
+	}
+
+	.col-lg-4 {
+		width: 33.33333333%;
+	}
+
+	.col-lg-3 {
+		width: 25%;
+	}
+
+	.col-lg-2 {
+		width: 16.66666667%;
+	}
+
+	.col-lg-1 {
+		width: 8.33333333%;
+	}
+
+	.col-lg-0 {
+		display: none;
+	}
+
+	#section4 article p img {
+		width: 50%;
+	}
+
+}
+
+/*=============================================
+DESKTOP SCREEN SIZE - MEDIUM (md) - We check tablets horizontal position 1024px
+=============================================*/
+
+@media(max-width:1199px) and (min-width:992px) {
+
+	.col-md-12 {
+		width: 100%;
+	}
+
+	.col-md-11 {
+		width: 91.66666667%;
+	}
+
+	.col-md-10 {
+		width: 83.33333333%;
+	}
+
+	.col-md-9 {
+		width: 75%;
+	}
+
+	.col-md-8 {
+		width: 66.66666667%;
+	}
+
+	.col-md-7 {
+		width: 58.33333333%;
+	}
+
+	.col-md-6 {
+		width: 50%;
+	}
+
+	.col-md-5 {
+		width: 41.66666667%;
+	}
+
+	.col-md-4 {
+		width: 33.33333333%;
+	}
+
+	.col-md-3 {
+		width: 25%;
+	}
+
+	.col-md-2 {
+		width: 16.66666667%;
+	}
+
+	.col-md-1 {
+		width: 8.33333333%;
+	}
+
+	.col-md-0 {
+		display: none;
+	}
+
+	#section4 article p img {
+		width: 60%;
+	}
+}
+
+/*=============================================
+TABLET SCREEN SIZE - SMALL (sm) - We check tablets vertical position 768px
+=============================================*/
+
+@media(max-width:991px) and (min-width:768px) {
+
+	.col-sm-12 {
+		width: 100%;
+	}
+
+	.col-sm-11 {
+		width: 91.66666667%;
+	}
+
+	.col-sm-10 {
+		width: 83.33333333%;
+	}
+
+	.col-sm-9 {
+		width: 75%;
+	}
+
+	.col-sm-8 {
+		width: 66.66666667%;
+	}
+
+	.col-sm-7 {
+		width: 58.33333333%;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+
+	.col-sm-5 {
+		width: 41.66666667%;
+	}
+
+	.col-sm-4 {
+		width: 33.33333333%;
+	}
+
+	.col-sm-3 {
+		width: 25%;
+	}
+
+	.col-sm-2 {
+		width: 16.66666667%;
+	}
+
+	.col-sm-1 {
+		width: 8.33333333%;
+	}
+
+	.col-sm-0 {
+		display: none;
+	}
+
+	#section4 article p img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+/*=============================================
+SMARTPHONE SCREEN SIZE - EXTRA SMALL (xs) - we check smartphones horizontal 480px or vertical 320px
+=============================================*/
+
+@media(max-width:767px) {
+
+	.col-xs-12 {
+		width: 100%;
+	}
+
+	.col-xs-11 {
+		width: 91.66666667%;
+	}
+
+	.col-xs-10 {
+		width: 83.33333333%;
+	}
+
+	.col-xs-9 {
+		width: 75%;
+	}
+
+	.col-xs-8 {
+		width: 66.66666667%;
+	}
+
+	.col-xs-7 {
+		width: 58.33333333%;
+	}
+
+	.col-xs-6 {
+		width: 50%;
+	}
+
+	.col-xs-5 {
+		width: 41.66666667%;
+	}
+
+	.col-xs-4 {
+		width: 33.33333333%;
+	}
+
+	.col-xs-3 {
+		width: 25%;
+	}
+
+	.col-xs-2 {
+		width: 16.66666667%;
+	}
+
+	.col-xs-1 {
+		width: 8.33333333%;
+	}
+
+	.col-xs-0 {
+		display: none;
+	}
+
+	#section4 article p img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+}
+
+

@@ -150,6 +150,9 @@ SECTION 4
 	text-align: justify;
 	color:#fff;
 }
+#section4 article u {
+	color: #fff;
+}
 
 #section4 aside#right h1 {
 	line-height: 50px;

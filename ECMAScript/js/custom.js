@@ -17,13 +17,16 @@ function AwesomeFunc()
     console.log("bye");
 }
 
-// Function call
+// AwesomeFunc() Function call.
 AwesomeFunc();
 
 function Sum(num1, num2)
 {
     var result = num1 + num2;
-    console.log(result);
+    return result;
 }
+
+// Sum(num1, num2) Function call and print to console.
+console.log(Sum(5, 10));
 
 

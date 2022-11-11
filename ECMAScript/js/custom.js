@@ -30,10 +30,16 @@ function Sum(num1, num2)
 console.log(Sum(5, 10));
 
 
+
 // "FOR" loop and print to console.
-for (var i=0; i<=10; i += 2){
+for (var i=0; i<=100; i += 2){
+   
+    if (i===25){
+        break;
+    }
     console.log("The value at position: " + i + " is: " +i);
 }
+
 
 // "FOR IN" loop and print to console.
 var amazingObject = {a: 1, b: 2, c: 3, d: 4, e: 5, f: 10}
@@ -41,3 +47,11 @@ var amazingObject = {a: 1, b: 2, c: 3, d: 4, e: 5, f: 10}
 for (var item in amazingObject){
     console.log(item + " : " + amazingObject[item]);
 }
+
+
+// "DO WHILE" loop
+let k = 0;
+do{
+    console.log("This is position for K: " +k);
+    k += 2 
+}while (k<20)

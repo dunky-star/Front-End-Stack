@@ -53,11 +53,11 @@ for (var item in amazingObject){
 
 
 // "DO WHILE" loop
-let k = 0;
+let n = 0;
 do{
-    console.log("This is position for K: " +k);
-    k += 2 
-}while (k<20)
+    console.log("This is position for K: " +n);
+    n += 2 
+}while (n<20)
 
 
 // An array data
@@ -69,10 +69,29 @@ for (var i=0; i<arrName.length; i++){
     console.log("The array value at position: " + i + " is: " +arrName[i]);
 }
 
+
 console.log("\n");
 var newArr = new Array(100);
+
+
 for (var j=0; j<newArr.length; j++){
     newArr[j] = j * j;
     console.log("The array value at position: " + j + " is: " +newArr[j]);
 }
 
+newArr.push(4000);
+newArr.push(15000);
+console.log("\n");
+for (var k=0; k<newArr.length; k++){
+   console.log("The array value at position: " + k + " is: " +newArr[k]);
+}
+
+
+newArr.pop();
+console.log("\nThe new array length is: " +newArr.length);
+
+// Finding index of a value in a array.
+console.log("The index of 5776 is: " +newArr.findIndex((x) => x == 5776));
+
+// HTML DOM
+document.getElementById("HelloWorld").style.color='red';

@@ -30,14 +30,17 @@ function Sum(num1, num2)
 console.log(Sum(5, 10));
 
 
-
-// "FOR" loop and print to console.
-for (var i=0; i<=100; i += 2){
-   
-    if (i===25){
-        break;
+function callThisAwesomeFunc(){
+   // "FOR" loop and print to console.
+    for (var i=0; i<=100; i += 2){
+    
+        if (i===30)
+        {
+            break;
+        }
+        console.log("The value at position: " + i + " is: " +i);
     }
-    console.log("The value at position: " + i + " is: " +i);
+
 }
 
 
@@ -55,3 +58,21 @@ do{
     console.log("This is position for K: " +k);
     k += 2 
 }while (k<20)
+
+
+// An array data
+ var arrName = [10, 20, 30, 40, 50 ,80];
+// console.log(arrName[0]);
+// console.log(arrName[5]);
+console.log("\n");
+for (var i=0; i<arrName.length; i++){
+    console.log("The array value at position: " + i + " is: " +arrName[i]);
+}
+
+console.log("\n");
+var newArr = new Array(100);
+for (var j=0; j<newArr.length; j++){
+    newArr[j] = j * j;
+    console.log("The array value at position: " + j + " is: " +newArr[j]);
+}
+

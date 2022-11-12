@@ -49,6 +49,19 @@ class Shapes extends Rectangle{
 
 // Form validation
 function validationFunc(){
-    console.log("Woroking");
-    console.log(document.EpicForm.username.value);
+    
+    var varUsername = document.EpicForm.username.value;
+    console.log(varUsername);
+    if (varUsername === "")
+    {
+        console.log("Username cannot be empty");
+    } 
+    else if ( varUsername.length<10)
+    {
+       console.log("Length should be more than 10 characters");
+    } 
+    else
+    {
+        console.log("Success");   
+    }
 }

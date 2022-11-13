@@ -74,21 +74,26 @@ console.log("The result from Lambda function is : " + epicVarFunc(5,2));
 
 
 // Immediately invoked functions
-function immediatelyInvokedFunc(){
+var  immediatelyInvokedFunc = function(){
    // "FOR" loop and print to console.
-    for (var i=0; i<=10; i ++){
+   (function(){
+        for (var i=0; i<=10; i ++){
+            
+                console.log("\nThe value at position: " + i + " is: " +i);
+            }
+   })();
+        
     
-        console.log("\nThe value at position: " + i + " is: " +i);
-    }
+    console.log(" The value of immediate invoke " + i);
 
 }
 
 // Calling the function.
-immediatelyInvokedFunc()
+immediatelyInvokedFunc();
+
 
 
 // Using promise to achieve ASYNC tasks.
-
 function Divide(num1, num2){
     var promise = new Promise(function(resolve, reject){
         if(num2 !== 0)

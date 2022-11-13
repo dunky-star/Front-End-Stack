@@ -74,7 +74,7 @@ function Divide(num1, num2){
             resolve(num2/num1);
         }
         else{
-            reject("Divide by zero is an erro");
+            reject("Divide by zero is an error");
         }
     });
 
@@ -83,4 +83,13 @@ function Divide(num1, num2){
     
 }
 
-console.log("\n Promise: The division of " + num1 + " and " + num2 + " is : " + Divide(5,0));
+Divide(5,0)
+    .then(
+        function(result)
+        {
+            console.log(result);
+        },
+        function(err)
+        {
+            console.log(err);
+        });

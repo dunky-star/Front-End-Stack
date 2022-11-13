@@ -1,6 +1,5 @@
 "use strict"; // strict mode to enforce some type safety.
 
-
 // Classes in JavaScript
 
 class Rectangle{
@@ -65,4 +64,21 @@ function validationFunc(){
     {
         console.log("Success");   
     }
+}
+
+// Using promise to achieve ASYNC tasks.
+function divide(num1, num2){
+    var promise = new Promise(function(resolve, reject){
+        if(num2 !== 0)
+        {
+            resolve(num2/num1);
+        }
+        else{
+            reject("Divide by zero is an erro");
+        }
+    });
+
+    return promise;
+
+    
 }

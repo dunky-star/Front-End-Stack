@@ -22,9 +22,8 @@ function AwesomeFunc()
     document.getElementById("HelloWorldJ").style.color='red';
 }
 
-// Function call
+// AwesomeFunc() Function call.
 AwesomeFunc();
-
 
 function Sum(num1, num2)
 {

@@ -75,16 +75,16 @@ console.log("The result from Lambda function is : " + epicVarFunc(5,2));
 
 // Immediately invoked functions
 var  immediatelyInvokedFunc = function(){
-   // "FOR" loop and print to console.
+   // Function inside a function
    (function(){
-        for (var i=0; i<=10; i ++){
+        for (var z=0; z<10; z ++){
             
-                console.log("\nThe value at position: " + i + " is: " +i);
+                console.log("\nThe iteration : " + z + " is: " +z);
             }
    })();
         
     
-    console.log(" The value of immediate invoke " + i);
+    console.log(" The value of immediate invoke : " +z);
 
 }
 

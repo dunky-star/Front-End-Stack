@@ -1,5 +1,7 @@
 "use strict"; // strict mode to enforce some type safety.
 
+
+
 console.log("Hello World of JS");
 
 let r = 5;
@@ -10,15 +12,19 @@ console.log("The area of a circle is: " +a);
 
 // var awesome = prompt("Enter your first name: ");
 
+// Exporting a function to be used in another module.
 function AwesomeFunc()
 {
     console.log("Hello");
     console.log("and");
     console.log("bye");
+    // HTML DOM
+    document.getElementById("HelloWorldJ").style.color='red';
 }
 
-// AwesomeFunc() Function call.
+// Function call
 AwesomeFunc();
+
 
 function Sum(num1, num2)
 {
@@ -94,4 +100,4 @@ console.log("\nThe new array length is: " +newArr.length);
 console.log("The index of 5776 is: " +newArr.findIndex((x) => x == 5776));
 
 // HTML DOM
-document.getElementById("HelloWorld").style.color='red';
+// document.getElementById("HelloWorld").style.color='red';

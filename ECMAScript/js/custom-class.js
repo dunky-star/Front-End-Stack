@@ -1,5 +1,6 @@
 "use strict"; // strict mode to enforce some type safety.
 
+
 // Classes in JavaScript
 
 class Rectangle{

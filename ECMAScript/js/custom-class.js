@@ -67,7 +67,7 @@ function validationFunc(){
 }
 
 // Using promise to achieve ASYNC tasks.
-function divide(num1, num2){
+function Divide(num1, num2){
     var promise = new Promise(function(resolve, reject){
         if(num2 !== 0)
         {
@@ -82,3 +82,5 @@ function divide(num1, num2){
 
     
 }
+
+console.log("\n Promise: The division of " + num1 + " and " + num2 + " is : " + Divide(5,0));

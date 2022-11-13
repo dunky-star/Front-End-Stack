@@ -66,15 +66,37 @@ function validationFunc(){
     }
 }
 
+
+
+// Arrow and Lambda Function
+const epicVarFunc = (x, y) => { var resultMult = x * y; return resultMult;}
+console.log("The result from Lambda function is : " + epicVarFunc(5,2));
+
+
+// Immediately invoked functions
+function immediatelyInvokedFunc(){
+   // "FOR" loop and print to console.
+    for (var i=0; i<=10; i ++){
+    
+        console.log("\nThe value at position: " + i + " is: " +i);
+    }
+
+}
+
+// Calling the function.
+immediatelyInvokedFunc()
+
+
 // Using promise to achieve ASYNC tasks.
+
 function Divide(num1, num2){
     var promise = new Promise(function(resolve, reject){
         if(num2 !== 0)
         {
-            resolve(num2/num1);
+            resolve(num1/num2);
         }
         else{
-            reject("Divide by zero is an error");
+            reject("\nDivide by zero is an error");
         }
     });
 
@@ -83,13 +105,26 @@ function Divide(num1, num2){
     
 }
 
-Divide(5,0)
+Divide(5,2)
     .then(
         function(result)
         {
-            console.log(result);
+            console.log("\n The first result of division is : " + result);
+            return Divide(10,5);
+        },
+        function(err)
+        {
+            console.log(err);
+        })
+        
+    .then(
+        function(result)
+        {
+            console.log("\n The second result of division is : " + result);
         },
         function(err)
         {
             console.log(err);
         });
+
+

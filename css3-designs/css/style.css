@@ -5,7 +5,7 @@
     list-style: none;
     font-family: sans-serif;
     box-sizing: border-box;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
 }
 
 .container {
@@ -42,5 +42,12 @@
     padding: 10px;
     margin: 10px;
 }
+
+.lheight {
+    line-height: 20px;
+    text-align: justify;
+}
+
+nav 
 
 

@@ -1,7 +1,22 @@
-a {
-    color:#381F1E;
+#top {
+    background: yellow;
 }
 
-h1 {
-    color: green;
+#header {
+    background-image: url(../img/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100px;
+    color: #fff;
 }
+
+.green {
+    background: #5fa359;
+}
+
+.blue {
+    color: #381F1E;
+    background: #fff ;
+}
+

@@ -71,6 +71,12 @@ table, td {
     text-align: center;
 }
 
+table {
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+}
+
 th {
     width: 12%;
     border: 1px solid #ddd;
@@ -83,4 +89,7 @@ td {
 #lowercol {
     background-color: #000; 
     color: #fff;"
+}
+#uppercol h3 {
+    font-family: 'Kaushan Script', cursive;
 }

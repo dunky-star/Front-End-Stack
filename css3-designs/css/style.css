@@ -39,8 +39,25 @@
 .blue {
     color: #381F1E;
     background: #fff ;
+    margin-bottom: 50px;
+}
+
+.blue a {
     padding: 10px;
-    margin: 10px;
+}
+
+.blue a:hover {
+    background: #381F1E;
+    color: #fff;
+}
+
+.blue a:visited {
+    background: #381F1E;
+    color: darkred;
+}
+
+.blue a:active {
+    background: rgb(134, 184, 42);
 }
 
 .lheight {
@@ -48,6 +65,15 @@
     text-align: justify;
 }
 
-nav 
+table {
+    border: 1px solid black;
+}
 
+th {
+    width: 12%;
+    border: 1px solid #ddd;
+}
 
+td {
+    border: 1px solid #222;
+}

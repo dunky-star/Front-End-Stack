@@ -98,3 +98,7 @@ footer {
     margin-top: 10px;
     text-align: center;
 }
+
+nav div {
+    display: inline;
+}

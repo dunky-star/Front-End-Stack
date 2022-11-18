@@ -93,3 +93,8 @@ td {
 #uppercol h3 {
     font-family: 'Kaushan Script', cursive;
 }
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+}

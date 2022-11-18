@@ -65,15 +65,13 @@
     text-align: justify;
 }
 
-table {
+table, td {
     border: 1px solid black;
+    margin: auto;
+    text-align: center;
 }
 
 th {
     width: 12%;
     border: 1px solid #ddd;
-}
-
-td {
-    border: 1px solid #222;
 }

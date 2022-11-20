@@ -24,5 +24,27 @@ p {
 }
 
 p::first-letter{
-    text-transform:capitalize;
+    background-color: #000;
+    color:white;
+}
+p::selection {
+    background-color: blueviolet;
+    color: white;
+}
+
+/*Media query techniques*/
+body{
+    background-color: rgb(51, 130, 51);
+}
+div {
+    border: 1px solid black;
+}
+@media all and (min-width:1024px) and (max-width:1080px){
+    
+    body{background-color: #381F1E;}
+    div {
+        width: 200px;
+        float: left;
+        border: 3px solid black;
+    }
 }

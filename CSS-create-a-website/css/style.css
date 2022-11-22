@@ -108,6 +108,7 @@ p {
 p::first-letter{
     background-color: #000;
     color:white;
+    font-size: 3em;
 }
 p::selection {
     background-color: blueviolet;

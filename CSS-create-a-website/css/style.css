@@ -4,19 +4,28 @@
     margin: auto;
     width: 100%;
     height: auto;
-}
-
-.thumbnail{
-    float: left;
+    background-color: beige;
     padding: 10px;
-    border: 1px solid #eee;
-    margin: 10px;
-    border-radius: 5px;
-    /*box-shadow: 5px 5px;*/
 }
 
-.myImg{
-    max-width: 100%;
+nav{
+  width: 100%;
+  background-color: #333;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
 }
 
 p {

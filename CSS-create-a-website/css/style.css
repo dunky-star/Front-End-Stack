@@ -56,15 +56,19 @@ nav a:hover{
     color: black;
     width: 56%;
     float: left;
-    height: 100%;
+    min-height: 500px;
     padding: 5px 2%;
 }
 
+.main-container{
+    background-color: #5fa359;
+    margin-bottom: 10px;
+
+}
 #side-menu {
     width: 36%;
     float: right;
-    background-color: #5fa359;
-    margin-bottom: 10px;
+    /* background-color: #5fa359; */
     padding: 0 2%;
 }
 
@@ -90,7 +94,6 @@ nav a:hover{
 }
 
 .footer-container {
-   
     background-color: #5fa359;
     color: white;
     text-align: center;

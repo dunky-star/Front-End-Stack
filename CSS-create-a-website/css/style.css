@@ -10,14 +10,14 @@
 
 nav{
   width: 100%;
-  background-color: #333;
+  background-color: #5fa359;
 }
 
 nav ul li{
     list-style-type: none;
     display: inline-block;
     width: 150px;
-    
+     
 }
 
 nav a{
@@ -25,7 +25,67 @@ nav a{
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    display: block;
+}
 
+nav a:hover{
+    background-color: red;
+    color: black;
+}
+
+.header-container header{
+    background-color: #381F1E;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#content {
+    background-color: #fff;
+    color: black;
+    width: 56%;
+    float: left;
+    height: 100%;
+    padding: 0 2%;
+}
+
+#side-menu {
+    width: 36%;
+    float: right;
+    background-color: #5fa359;
+    margin-bottom: 10px;
+    padding: 0 2%;
+}
+
+#side-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#side-menu li {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    padding: 3px 0;
+    
+}
+
+#side-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#side-menu li:hover {
+    background-color: #381F1E;
+}
+
+.footer-container {
+   
+    background-color: #5fa359;
+}
+
+.clearfix {
+    clear: both;
 }
 
 p {

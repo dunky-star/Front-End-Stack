@@ -1,0 +1,103 @@
+.container{
+    max-width: 1080px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail{
+    float: left;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 10px;
+    border-radius: 5px;
+    /*box-shadow: 5px 5px;*/
+}
+
+.myImg{
+    max-width: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+p::first-letter{
+    background-color: #000;
+    color:white;
+}
+p::selection {
+    background-color: blueviolet;
+    color: white;
+}
+
+/*Media query techniques*/
+body{
+    background-color: rgb(51, 130, 51);
+}
+
+div {
+    border: 1px solid black;
+}
+
+@media all and (min-width:1024px) and (max-width:1280px){
+    
+    body {
+        background-color: #381F1E;
+        color: #fff;
+    }
+
+    div {
+        width: 200px;
+        float: left;
+        border: 3px solid #fff;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1024px) {
+
+    body {
+
+        background-color: #888;
+        
+    }
+
+    div {
+        width: 50%;
+        float: left;
+        border: 3px solid #fff;
+    }
+}
+
+@media all and (min-width:480px) and (max-width:768px) {
+
+    body {
+
+        background-color: rgb(115, 189, 36);
+
+    }
+
+    div {
+      
+        width: 100%;
+       
+    }
+}
+
+@media all and (max-width:480px) {
+
+    body {
+
+        background-color: pink;
+
+    }
+
+    div {
+
+        width: 100%;
+        border: 3px solid #fff;
+        
+
+    }
+}

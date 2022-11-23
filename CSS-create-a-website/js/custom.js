@@ -1,7 +1,5 @@
 "use strict"; // strict mode to enforce some type safety.
 
-document.write("Hello World of Java ECMAScript.");
-
 // JavaScript Objects within object
 
 var ourFriends = {
@@ -23,12 +21,10 @@ var ourFriends = {
 
 var a =1;
 
-console.log(ourFriends['person' + a ]);
-a++
-console.log(ourFriends['person' + a ]);
-a++
-console.log(ourFriends['person' + a ]);
-
+while (a<=3){
+    console.log(ourFriends['person' + a ]);
+    a++
+}
 
 
 // JavaScript array data structure.
@@ -50,6 +46,10 @@ console.log(h);
 var i = ourAnimals.join(',');  // Alternative Conversion of an array to String for data storage.
 console.log("Second array conversion to String using join method: " + i);
 
+// Using 'for' loop to print multi-dimensional array data.
+for (var x in ourAnimals){
+    console.log(ourAnimals[x]);
+}
 
 // JavaScript object within Array.
 var myArray = [

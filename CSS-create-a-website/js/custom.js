@@ -40,12 +40,15 @@ console.log(ourCars[2]);
 
 // JavaScript nested array data structure.
 var ourAnimals = [["Dog", "Cow", "Cat", "Lion"], ["Bark", "Bellow", "Meow", "Roar"]];
+delete ourAnimals[0][3]  // Deleting an element from array.
+ourAnimals[0][3] = "Lioness";  // Adding an element to an array.
 console.log("Our animal in the multi-dimensional array is: " + ourAnimals[0][2]);
-var g = ourAnimals.toString();   // Converting an array to String for data storage.
-console.log(g);
-var h = g.split(','); // Converting String to an array.
+var g = ourAnimals.toString();  // Converting an array to String for data storage.
+console.log("First array conversion using toString method: " + g);
+var h = g.split(','); // Converting String to an array for Array processing.
 console.log(h);
 var i = ourAnimals.join(',');  // Alternative Conversion of an array to String for data storage.
+console.log("Second array conversion to String using join method: " + i);
 
 
 // JavaScript object within Array.

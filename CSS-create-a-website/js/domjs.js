@@ -3,16 +3,14 @@
 // DOM - Document Object Model
 var listItems = document.getElementsByTagName('li');
 
-console.dir(listItems[4]);
-
-for(var x; x < listItems.length; x++)
+for(var x = 0; x < listItems.length; x++)
 {
     listItems[x].onmouseover = function()
     {
-        this.style.backgroundColor="red";
+        this.style.backgroundColor=="red";
     }
     listItems[x].onmouseout = function()
     {
-        this.style.backgroundColor="#381F1E";
+        this.style.backgroundColor=="#381F1E";
     }
 }

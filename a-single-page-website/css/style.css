@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+body {
+    font-family: 'Bellefair', serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.container{
+    max-width: 1080px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: beige;
+    padding: 10px;
+}
+
+nav{
+  width: 100%;
+  background-color: #5fa359;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    width: 150px;
+     
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    display: block;
+}
+
+nav a:hover{
+    background-color: red;
+    color: black;
+}
+
+.header-container header{
+    background-color: #381F1E;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#content {
+    background-color: #fff;
+    color: black;
+    width: 56%;
+    float: left;
+    min-height: 500px;
+    padding: 5px 2%;
+}
+
+.main-container{
+    background-color: #5fa359;
+    margin-bottom: 10px;
+
+}
+#side-menu {
+    width: 36%;
+    float: right;
+    /* background-color: #5fa359; */
+    padding: 0 2%;
+}
+
+#side-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#side-menu li {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    padding: 7px 0;    
+}
+
+#side-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#side-menu li:hover {
+    background-color: #381F1E;
+}
+
+
+.footer-container {
+    background-color: #5fa359;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+p {
+    text-align: justify;
+}
+
+p::first-letter{
+    background-color: #000;
+    color:white;
+    font-size: 3em;
+}
+p::selection {
+    background-color: blueviolet;
+    color: white;
+}
+
+
+
+

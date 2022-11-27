@@ -3,6 +3,16 @@
 body {
     font-family: 'Bellefair', serif;
 }
+
+#master-header {
+    width: 100%;
+    background-color: #381F1E;
+    height: 55px;
+    position: fixed;
+    z-index: 1;
+   
+}
+
 .container {
     max-width: 1080px;
     position: relative;
@@ -13,12 +23,8 @@ body {
     padding: 10px;
 }
 
-#master-header {
-    width: 100%;
-    background-color: #381F1E;
-    height: 55px;
-    position: fixed;
-    z-index: 1;
+.clearfix{
+    margin-top: 50px;
 }
 
 .section {
@@ -26,8 +32,10 @@ body {
     min-height: 500px;
 }
 
-nav {
+#nav {
+    float: right;
     margin-top: 10px;
+    max-width: 1080px;
 }
 
 #nav ul{

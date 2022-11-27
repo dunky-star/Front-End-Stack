@@ -4,8 +4,27 @@ body {
     font-family: 'Bellefair', serif;
 }
 
+#nav ul{
+    list-style: none;
+    margin: 0 auto;
+    display: block;
+}
 
+#nav li{
+    float: left;
+    padding: 0 10px;
+    margin: 2px;
+    background-color: #000;
+}
 
+#nav li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
 
+}
 
+#nav li a:hover{
+    color: red;
+}
 

@@ -23,18 +23,26 @@ body {
     padding: 10px;
 }
 
+/*
 .clearfix{
     margin-top: 50px;
 }
+*/
 
 .section {
-    border: 1px solid #ddd;
+    border: 1px solid rgba(200, 200, 200, 0.9);
     min-height: 500px;
+}
+
+#section1{
+    background-image: url(../img/image1.jpg);
+    background-size: cover;             
 }
 
 #nav {
     float: right;
-    margin-top: 10px;
+    margin: 5px 10px 0 0;
+    line-height: 20px;
     max-width: 1080px;
 }
 
@@ -62,8 +70,14 @@ body {
     color: red;
 }
 
-p {
+.wrap {
+    background-color: rgb(200,200,200);
+    background-color: rgba(200, 200, 200,0.9);
     text-align: justify;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 40px auto;
+    color: #381F1E;
 }
 
 

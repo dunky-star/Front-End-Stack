@@ -1,6 +1,7 @@
 "use strict"; // strict mode to enforce some type safety.
 
-// JavaScript window scroll
+// JavaScript window scrollspy effect
+
 
 var section = document.querySelectorAll('.section');
 var sections = {};
@@ -20,15 +21,3 @@ window.onscroll = function(){
     }
 }
 
-/*
-var sections = {};
-section.forEach(function(e){
-    console.log(e.id, e.offsetTop);
-})
-
-sections[e.id] = e.offsetTop;
-
-window.onscroll = function(){
-    console.log('scroll');
-}
-*/

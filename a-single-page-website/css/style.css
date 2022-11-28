@@ -77,6 +77,10 @@ body {
     color: red;
 }
 
+#nav li a.active{
+    border-bottom: 3px solid #fff;
+}
+
 .wrap {
     background-color: rgb(200,200,200);
     background-color: rgba(200, 200, 200,0.9);

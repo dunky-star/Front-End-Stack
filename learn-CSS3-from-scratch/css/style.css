@@ -11,12 +11,17 @@
     padding: 10px;
 }
 
+.bluebox:hover{
+    overflow: visible;
+}
+
 .yellowbox{
     background: rgb(222,224,85);
     height: 100px;
     width: auto;
     color: #381F1E;
     margin: 0 20px;
+    padding: 10px;
  
   }
 .greenbox{

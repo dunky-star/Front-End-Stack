@@ -5,6 +5,7 @@
     width: auto;
     padding: 16px;
     border-style: dashed;
+    margin: 20px;
 }
 
 .yellowbox{
@@ -13,15 +14,20 @@
     width: auto;
     color: #381F1E;
     padding: 10px 5px 7px 3em;
+    margin: 60px 30px 20px 30px;
 }
 .greenbox{
     background: #319f37;
-    height: auto;
-    width: auto;
+    height: 100px;
+    width: 100px;
     color: #fff;
-    padding: 40px 20px;
-    border-radius: 30px;
+    padding: 10px;
+    border-style: groove;
+    border-width: 10px;
+    border-radius: 80px;
+    border-color: #28ccb6;
 }
 p{
     margin: 0;
+    background: #8bbbbf;
 }

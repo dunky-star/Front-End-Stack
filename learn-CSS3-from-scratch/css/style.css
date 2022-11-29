@@ -3,7 +3,12 @@
     color: #fff;
     height: 100px;
     width: auto;
-    float: left;
+    /*float: left;
+    text-decoration: underline;*/
+    font-weight: bold;
+    margin: 20px;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .yellowbox{
@@ -11,7 +16,8 @@
     height: 100px;
     width: auto;
     color: #381F1E;
-    float: right;
+    margin: 0 20px;
+ 
   }
 .greenbox{
     background: #319f37;
@@ -25,6 +31,9 @@
     border-color: #28ccb6;
     margin: 5% 45%;
     clear: both;
+    text-decoration: overline;
+    font-style: italic;
+    font-size: 1.5em;
 }
 p{
     margin: 0;

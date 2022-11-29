@@ -1,19 +1,27 @@
 .bluebox{
     background: #3A5795;
     color: #fff;
-    height: 100px;
+    height: auto;
     width: auto;
+    padding: 16px;
+    border-style: dashed;
 }
 
 .yellowbox{
     background: rgb(222,224,85);
-    height: 100px;
+    height: auto;
     width: auto;
     color: #381F1E;
+    padding: 10px 5px 7px 3em;
 }
 .greenbox{
     background: #319f37;
-    height: 100px;
+    height: auto;
     width: auto;
     color: #fff;
+    padding: 40px 20px;
+    border-radius: 30px;
+}
+p{
+    margin: 0;
 }

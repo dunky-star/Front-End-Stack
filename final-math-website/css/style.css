@@ -107,3 +107,24 @@ ul {
     color: #628F19;
     text-align: justify;
 }
+
+.sidebar {
+    height: 500px ;
+    width: 450px;
+    border: 1px solid #BAF46F;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+.sidebar h3 {
+    color: #B314DB;
+    font-size: 25px;
+}
+
+#leftsidebar {
+    float: left;
+}
+
+#rightsidebar {
+    float: right;
+}

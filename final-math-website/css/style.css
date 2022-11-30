@@ -1,0 +1,16 @@
+#container{
+    width:1080px;
+    border: 1px solid grey;
+    height: 200px;
+    margin: 0 auto;
+}
+h1 a {
+    font-size: 50px;
+    font-weight: 100;
+    color:#861BBF;
+    text-decoration: none;
+}
+p{
+    margin: 0;
+    background: #8bbbbf;
+}

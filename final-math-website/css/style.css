@@ -74,7 +74,11 @@ ul {
     font-size: 17px;
     color: #5d12e7;
     line-height: 30px;
-    transition: font-size 1s linear;
+    -webkit-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
 }
 
 #menu ul li a:hover, #menu ul li a.active {
@@ -86,7 +90,12 @@ ul {
     border-right: none;
 }
 
+#introduction {
+    background: linear-gradient(#E5F2BB, #B7E952);
+    padding: 30px;
+}
+
 p{
     margin: 0;
-    background: #8bbbbf;
+    /* background: #8bbbbf; */
 }

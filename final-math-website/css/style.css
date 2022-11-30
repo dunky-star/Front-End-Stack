@@ -1,6 +1,6 @@
 #container{
     width:1080px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     height: auto;
     margin: 0 auto;
 }
@@ -35,6 +35,7 @@ h1 a {
     padding: 5px;
     font-size: 15px;
     color:#E36A0C;
+    background: white url(../img/search.png) right center no-repeat;
 }
 
 .submit{
@@ -44,6 +45,35 @@ h1 a {
     color:white;
     background: #A751D6;
     font-size: 15px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#menu {
+    height: 70px;
+    background: linear-gradient(#F8F594, #D5D533);
+    padding: 7px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+    padding: 0 30px;
+    height: 30px;
+    border-right: 1px solid #5d12e7;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #5d12e7;
+    line-height: 30px;
 }
 
 p{

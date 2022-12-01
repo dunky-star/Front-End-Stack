@@ -114,6 +114,7 @@ ul {
     border: 1px solid #BAF46F;
     border-radius: 20px;
     padding: 10px 30px;
+    margin-bottom: 20px;
 }
 
 .sidebar h3 {
@@ -170,4 +171,12 @@ ul {
 #rightsidebar ul li {
     padding-bottom: 6px;
   
+}
+
+.footer {
+    height: 60px;
+    padding: 20px 30px;
+    text-align: center;
+    color: #316901;
+    background: linear-gradient(#E5F2BB, #B7E952);
 }

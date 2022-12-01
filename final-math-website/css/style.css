@@ -121,10 +121,53 @@ ul {
     font-size: 25px;
 }
 
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+    -webkit-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: #B314DB;
+    font-size: 23px;
+    font-weight: bold;
+}
+
 #leftsidebar {
     float: left;
 }
 
+#leftsidebar ul{
+    padding-top: 8px;
+}
+
+#leftsidebar ul li {
+    padding-bottom: 6px;
+    padding-left: 10px;
+    list-style-image: url(../img/arrow.png);
+}
+
+#rightsidebar ul li {
+    padding-bottom: 6px;
+    padding-left: 10px;
+    list-style-image: url(../img/tick.png);
+}
+
 #rightsidebar {
     float: right;
+}
+
+#rightsidebar ul {
+    padding-top: 8px;
+}
+
+#rightsidebar ul li {
+    padding-bottom: 6px;
+  
 }

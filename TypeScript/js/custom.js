@@ -1,6 +1,6 @@
 "use strict"; // strict mode to enforce some type safety.
 
-/*
+
 // Object destructuring -> access part of an object or array.
 const response = {
     count : 10,
@@ -29,7 +29,7 @@ response.data.forEach(r =>{
 
 const quotient = {
     numbers: [1, 2, 3, 4, 5, 6, 7],
-    result: [],
+    results: [],
     divideFn: function(divisor){
         return this.numbers.map(function(divident){
             if(divident / divisor === 0){
@@ -56,7 +56,7 @@ console.log(
     multiply(5,2)
 );
 
-*/
+
 
 
 // Class in ECMAScript 2015

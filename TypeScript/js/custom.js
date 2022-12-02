@@ -85,7 +85,7 @@ class Truck extends Car {
 }
 
 const car = new Car('BMW', 'Black', 250);
-console.log(car.getMaxSpeed);
+console.log(car.getMaxSpeed());
 
 const truck = new Truck('MAN', 'Red' , 80);
-console.log(truck.getMaxSpeed);
+console.log(truck.getMaxSpeed());

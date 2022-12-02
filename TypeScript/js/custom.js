@@ -68,14 +68,14 @@ class Car{
     }
 
     getMaxSpeed(){
-        return `Maximum speed is ${this.speed} km/h`;
+        return `Maximum car speed is ${this.speed} km/h`;
     }
 }
 
 class Truck extends Car {
 
      getMaxSpeed(){
-        return `Maximum speed is ${this.speed} km/h`;
+        return `Maximum truck speed is ${this.speed} km/h`;
     }
      
     getMake(){

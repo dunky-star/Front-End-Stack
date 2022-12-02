@@ -5,7 +5,7 @@ const greaterThanTwo = numbersSeq.filter(number => number > 2);
 console.log(greaterThanTwo);
 
 
-// Primitive data types in TypeScript.
+// Primitive data types in TypeScript (boolean, number, string).
 
 const isAdmin: boolean = true;
 const user: string = 'Duncacn';
@@ -21,7 +21,7 @@ else{
 console.log(welcome);
 
 
-// Non-primitive data types
+// Non-primitive data types (array, tuple, enum, any, never, null and undefined, void, function, type)
 const numbers: number[] = [0, 1, 2, 3, 4];
 numbers.push(100);
 console.log(numbers);
@@ -29,4 +29,26 @@ console.log(numbers);
 const names: Array<string> = ["Duncan", "John", "Pete"];
 names.push("Kaligs");
 
-const mixed: (string | number)[] = [1, "Duncan", 10, "Pete"];
+const mixed: Array<string | number> = [1, "Duncan", 10, "Pete"];
+mixed.push(1000);
+mixed.push("Kaligs");
+
+
+// Function data type
+function greet(name: string): string {
+    return `Hello ${name}`;
+}
+console.log(greet("opiyo"));
+
+
+// Type data type
+type User = {
+    name: string;
+    age: number;
+}
+
+const myUser: User = {
+    name: "Duncan",
+    age: 34
+};
+

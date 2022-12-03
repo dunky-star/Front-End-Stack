@@ -52,7 +52,7 @@ const myUser: User = {
     age: 34
 };
 
-// Object Data Type.
+// Object Data Type - array of objects.
 const users : { name: string, age: number}[] = [
     {
         name: "Adam",
@@ -69,4 +69,51 @@ const users : { name: string, age: number}[] = [
 ]
 
 
+// Interfaces in TypeScript.
+interface IUser {
+    name: string;
+    age: number;
+    address?: string;  // An optional variable in TypeScript.
+    [property: string]: any 
+}
 
+let adminUser: IUser = {
+    name: "Duncan",
+    age: 34,
+    xyz: "asdf"
+
+}
+console.log(adminUser.age);
+
+
+interface IGreet {
+    (name: string, language: string): string
+}
+
+let hello: IGreet;
+hello = function(n: string, lang: string){
+    if (lang === "en"){
+        return `Hello ${n}!`;
+    } else {
+        return `Hola ${n}!`;
+    }
+}
+
+console.log(hello("Duncan", "en"));
+
+
+
+// Data types and optional parameter for a function.
+
+function greetings(name: string, language: string="en", exclamationMark?: string): string {
+    if (language === "en"){
+        return `Hello ${name}`;
+    } else if(language="es"){
+        return `Hola ${name}${exclamationMark}`;
+    } else {
+        return `Yo ${name}!`;
+    }
+}
+
+greetings("Duncan");
+greetings("Duncan", 'en');

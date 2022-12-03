@@ -7,3 +7,4 @@ Servers/
 /build/
 .settings/
 .lib/
+/dist/

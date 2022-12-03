@@ -1,3 +1,10 @@
+// importing modules
+import IUser from './iuser';
+import IGreet from './igreet';
+import Human from './abstract-human';
+
+
+
 const numbersSeq = [0, 1, 2, 3, 4, 10, 20];
 
 const greaterThanTwo = numbersSeq.filter(number => number > 2);
@@ -69,14 +76,6 @@ const users : { name: string, age: number}[] = [
 ]
 
 
-// Interfaces in TypeScript.
-interface IUser {
-    name: string;
-    age: number;
-    address?: string;  // An optional variable in TypeScript.
-    [property: string]: any 
-}
-
 let adminUser: IUser = {
     name: "Duncan",
     age: 34,
@@ -86,9 +85,6 @@ let adminUser: IUser = {
 console.log(adminUser.age);
 
 
-interface IGreet {
-    (name: string, language: string): string
-}
 
 let hello: IGreet;
 hello = function(n: string, lang: string){
@@ -133,17 +129,6 @@ class Person implements IUser{
     }
 }
 
-abstract class Human{
-    public name: string;
-    public age?: number;
-    constructor(name: string){
-        this.name = name;
-    }
-
-    abstract addPower(power: string): void;
-
-    abstract listPowers(): string[];
-}
 
 class SuperHero extends Human {
     superPowers: string[] = [];

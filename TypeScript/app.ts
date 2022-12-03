@@ -120,7 +120,7 @@ greetings("Duncan", 'en');
 
 
 // Classes & Inheritance in TypeScript
-class Person {
+class Person implements IUser{
     name: string;
     age: number;
     constructor(name: string, age: number){
@@ -133,14 +133,26 @@ class Person {
     }
 }
 
-class SuperHero extends Person {
-    superPowers: string[] = [];
-
-    constructor (name: string, age: number) {
-        super(name, age);
+abstract class Human{
+    public name: string;
+    public age?: number;
+    constructor(name: string){
+        this.name = name;
     }
 
-    addPower(power: string): void{
+    abstract addPower(power: string): void;
+
+    abstract listPowers(): string[];
+}
+
+class SuperHero extends Human {
+    superPowers: string[] = [];
+
+    constructor (name: string) {
+        super(name);
+    }
+
+    addPower(power: string): void {
         this.superPowers.push("power");
     }
 
@@ -149,6 +161,6 @@ class SuperHero extends Person {
     }
 }
 
-let batMan = new SuperHero("Bruce Lee", 34);
+let batMan = new SuperHero("Bruce Lee");
 batMan.addPower("money");
 console.log(batMan.listPowers);

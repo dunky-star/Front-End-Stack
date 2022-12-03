@@ -61,6 +61,10 @@ const users : { name: string, age: number}[] = [
     {
         name: "John",
         age: 40
+    },
+    {
+        name: "Anjana",
+        age: 40
     }
 ]
 

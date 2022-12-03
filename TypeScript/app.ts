@@ -21,7 +21,7 @@ else{
 console.log(welcome);
 
 
-// Non-primitive data types (array, tuple, enum, any, never, null and undefined, void, function, type)
+// Non-primitive data types (array, tuple, enum, any, never, null and undefined, void, function, type, Object).
 const numbers: number[] = [0, 1, 2, 3, 4];
 numbers.push(100);
 console.log(numbers);
@@ -51,4 +51,18 @@ const myUser: User = {
     name: "Duncan",
     age: 34
 };
+
+// Object Data Type.
+const users : { name: string, age: number}[] = [
+    {
+        name: "Adam",
+        age: 30
+    },
+    {
+        name: "John",
+        age: 40
+    }
+]
+
+
 

@@ -115,5 +115,40 @@ function greetings(name: string, language: string="en", exclamationMark?: string
     }
 }
 
-greetings("Duncan");
+greetings("Duncan", "!");
 greetings("Duncan", 'en');
+
+
+// Classes & Inheritance in TypeScript
+class Person {
+    name: string;
+    age: number;
+    constructor(name: string, age: number){
+        this.name=name;
+        this.age=age;
+    }
+
+    greet(): string {
+        return `Hello ${this.name}`;
+    }
+}
+
+class SuperHero extends Person {
+    superPowers: string[] = [];
+
+    constructor (name: string, age: number) {
+        super(name, age);
+    }
+
+    addPower(power: string): void{
+        this.superPowers.push("power");
+    }
+
+    listPowers(): string[] {
+        return this.superPowers;
+    }
+}
+
+let batMan = new SuperHero("Bruce Lee", 34);
+batMan.addPower("money");
+console.log(batMan.listPowers);

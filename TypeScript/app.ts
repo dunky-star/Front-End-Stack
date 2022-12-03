@@ -29,9 +29,9 @@ console.log(welcome);
 
 
 // Non-primitive data types (array, tuple, enum, any, never, null and undefined, void, function, type, Object).
-const numbers: number[] = [0, 1, 2, 3, 4];
-numbers.push(100);
-console.log(numbers);
+const numbersArgs: number[] = [0, 1, 2, 3, 4];
+numbersArgs.push(100);
+console.log(numbersArgs);
 
 const names: Array<string> = ["Duncan", "John", "Pete"];
 names.push("Kaligs");
@@ -149,3 +149,17 @@ class SuperHero extends Human {
 let batMan = new SuperHero("Bruce Lee");
 batMan.addPower("money");
 console.log(batMan.listPowers);
+
+
+
+// Generics in TypeScript
+function picker<T>(args: T[]): T {
+    const randomIndex = Math.floor(Math.random()* args.length);
+    return args[randomIndex];
+}
+
+const suits = ['Diamond', 'Hearts', 'Clubs', 'Spades'];
+const numbers = [...Array(13).keys()];
+const pickedNumber: number = picker(numbers);
+const pickedSuit: string = picker(suits);
+console.log(`Your card is: ${pickedNumber} ${pickedSuit}`);

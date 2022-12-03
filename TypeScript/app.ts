@@ -112,7 +112,7 @@ function greetings(name: string, language: string="en", exclamationMark?: string
 }
 
 greetings("Duncan", "!");
-greetings("Duncan", 'en');
+console.log(greetings("Duncan", 'en', '!'));
 
 
 // Classes & Inheritance in TypeScript

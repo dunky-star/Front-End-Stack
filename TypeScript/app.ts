@@ -116,7 +116,9 @@ const users : { name: string, age: number}[] = [
 let adminUser: IUser = {
     name: "Duncan",
     age: 34,
-    xyz: "asdf"
+    xyz: "asdf",
+    
+    walk: () => {return;}  
 
 }
 console.log(adminUser.age);
@@ -164,6 +166,10 @@ class Person implements IUser{
     greet(): string {
         return `Hello ${this.name}`;
     }
+
+    walk(): void { 
+        return;
+    }
 }
 
 
@@ -180,6 +186,10 @@ class SuperHero extends Human {
 
     listPowers(): string[] {
         return this.superPowers;
+    }
+    
+    walk(): void { 
+        return;
     }
 }
 

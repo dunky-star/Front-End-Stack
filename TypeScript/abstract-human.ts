@@ -18,4 +18,6 @@ export default abstract class Human implements IUser{
     abstract addPower(power: string): void;
 
     abstract listPowers(): string[];
+
+    abstract walk (): void;
 }

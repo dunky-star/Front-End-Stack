@@ -12,7 +12,7 @@ const greaterThanTwo = numbersSeq.filter(number => number > 2);
 console.log(greaterThanTwo);
 
 
-// Primitive data types in TypeScript (boolean, number, string).
+// Demonstratig usage of primitive data types in TypeScript (boolean, number, string).
 
 const isAdmin: boolean = true;
 const user: string = 'Duncacn';
@@ -33,9 +33,34 @@ const numbersArgs: number[] = [0, 1, 2, 3, 4];
 numbersArgs.push(100);
 console.log(numbersArgs);
 
-const names: Array<string> = ["Duncan", "John", "Pete"];
-names.push("Kaligs");
 
+let fruits: Array<string> = ["Apple", "Green Apple", "Grapes", "Guava"];
+let food: String[] = ["Pizza", "Burger", "Fries"];
+    food.push("Cali Flower");
+// spread operator: spreads the element of an object or array.
+// Also merging multiple arrays/objects into one flat array/object. Denoted by (...)
+let edibles: String[] = [...fruits, ...food];
+console.log("Got the edibles as: ", edibles);
+
+
+let userBio = {
+    firstName: "Duncan",
+    lastName: "Kaligs",
+    username: "dunkycarl"
+}
+
+// To combine username an userBio and userDetais using spredad operator.
+let userDetails = {
+    ...userBio,
+    address: "123 Najjera II",
+    email: "dunky@mail.com"
+}
+
+// Loging the value to console after the spread operator.
+console.log("Got the user as: ", userDetails)
+
+
+// An array of mixed data types.
 const mixed: Array<string | number> = [1, "Duncan", 10, "Pete"];
 mixed.push(1000);
 mixed.push("Kaligs");

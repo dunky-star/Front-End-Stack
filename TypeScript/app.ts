@@ -34,9 +34,9 @@ numbersArgs.push(100);
 console.log(numbersArgs);
 
 
-let fruits: Array<string> = ["Apple", "Green Apple", "Grapes", "Guava"];
+let fruits: Array<string> = ["Apple", "GreenApple", "Grapes", "Guava"];
 let food: String[] = ["Pizza", "Burger", "Fries"];
-    food.push("Cali Flower");
+    food.push("CaliFlower");
 // spread operator: spreads the element of an object or array.
 // Also merging multiple arrays/objects into one flat array/object. Denoted by (...)
 let edibles: String[] = [...fruits, ...food];
@@ -66,7 +66,19 @@ mixed.push(1000);
 mixed.push("Kaligs");
 
 
-// Function data type
+// Destructure({}) - Breaks up the structure of an Array or Object.
+// Plucking elememnts from an Array or Object. Generally used in import statements.
+let {address, email } = userDetails;  // Let's destructure userDetails object
+console.log(address);
+console.log(email);
+
+
+let [Apple, GreenApple, Grapes] = fruits; // Let's destructure some fruits.
+console.log(Apple);
+console.log(Grapes);
+
+
+// Function data type and usage of backticks.
 function greet(name: string): string {
     return `Hello ${name}`;
 }

@@ -183,7 +183,7 @@ class SuperHero extends Human {
     }
 }
 
-let batMan = new SuperHero("Bruce Lee");
+const batMan = new SuperHero("Bruce Lee");
 batMan.addPower("money");
 console.log(batMan.listPowers);
 

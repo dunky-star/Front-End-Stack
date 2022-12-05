@@ -227,5 +227,22 @@ function getUserViaFetch(){
     });
 
 }
+getUserViaFetch(); 
 
-getUserViaFetch();
+
+// Async / wait is Syntactic sugar used with promises.
+// A function that returns a Promise can be called with the AWAIT keyword.
+// A function in which the function returning the promise is awaited must then be declared with the ASYNC keyword.
+
+function getUserViaAsyncWait(){
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+    . then (response => response.json());
+}
+
+async function initialize(){
+    const user = await getUserViaAsyncWait();
+    console.log("Got the user via fetch as: ", user);
+}
+
+getUserViaAsyncWait();
+

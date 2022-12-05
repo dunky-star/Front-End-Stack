@@ -216,7 +216,7 @@ console.log(`Your card is: ${pickedNumber} ${pickedSuit}`);
 // Fetch returns a promise
 
 function getUserViaFetch(){
-    fetch("https://jsonplaceholder.typicode.com/user/1")
+    fetch("https://jsonplaceholder.typicode.com/users/1")
     .then(response => {
         debugger;
         return response.json();

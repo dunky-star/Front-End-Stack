@@ -1,0 +1,36 @@
+/* You can add Global styles to this file, and also imports other style files */
+
+.container {
+  max-width: 1080px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#header {
+  height: 100px;
+  padding: 10px 0;
+}
+
+.styled {
+  border: 4px dashed #333;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 100;
+  color: #861BBF;
+  text-decoration: none;
+}
+
+.footer {
+  height: 60px;
+  padding: 20px 30px;
+  text-align: center;
+  color: #316901;
+  background: linear-gradient(#E5F2BB, #B7E952);
+  margin-top: 50px;
+}

@@ -1,20 +1,23 @@
 <!-- * * * * * * * * * * * The start * * * * * * * * * * * -->
 <div class="container">
-  <h1>Angular starter page.</h1>
+  <div class="styled">
+    <div id="header">
+      <h1>Angular starter page.</h1>
+      <!-- add the selector from the header component in core module -->
+      <app-header></app-header>
+      <!-- Footer -->
+    </div>
+    <div class="footer">
+      <footer>
+        <p>&copy; dunkygeoffrey39@gmail.com, all rights reserved.</p>
 
-    <!-- add the selector from the header component in core module -->
-    <app-header></app-header>
-  <!-- Footer -->
-  <footer>
-    <p>&copy; dunkygeoffrey39@gmail.com, all rights reserved.</p>
+      </footer>
+    </div>
+  </div>
 
-  </footer>
-
-
-  <!-- * * * * * * * * * * * The End * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * The End * * * * * * * * * * * -->
 
 </div>
-
 
 
 <router-outlet></router-outlet>

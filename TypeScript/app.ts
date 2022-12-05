@@ -49,7 +49,7 @@ let userBio = {
     username: "dunkycarl"
 }
 
-// To combine username an userBio and userDetais using spredad operator.
+// To combine userBio and userDetais using spread operator.
 let userDetails = {
     ...userBio,
     address: "123 Najjera II",
@@ -210,3 +210,20 @@ const numbers = [...Array(13).keys()];
 const pickedNumber: number = picker(numbers);
 const pickedSuit: string = picker(suits);
 console.log(`Your card is: ${pickedNumber} ${pickedSuit}`);
+
+
+// Fetch API in TypeScript. Fetch was recently introduced in ES6 and provides an interface for fetching resources.
+// Fetch returns a promise
+
+function getUserViaFetch(){
+    fetch("https//jsonplaceholder.typicode.com/user/1")
+    .then(response => {
+        debugger;
+        return response.json();
+    })
+    .then(user => {
+        debugger;
+        console.log("Got the user via fetch as: ", user);
+    });
+
+}

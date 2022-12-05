@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,8 @@ import { SafePipe } from './pipes/safe/safe.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

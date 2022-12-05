@@ -235,14 +235,14 @@ getUserViaFetch();
 // A function in which the function returning the promise is awaited must then be declared with the ASYNC keyword.
 
 function getUserViaAsyncWait(){
-    fetch("https://jsonplaceholder.typicode.com/users/1")
+    return fetch("https://jsonplaceholder.typicode.com/users/1")
     .then (response => response.json());
 }
 
 async function initialize(){
     const user = await getUserViaAsyncWait();
-    console.log("Got the user via fetch as: ", user);
+    console.log("Got the user via Aync/Await as: ", user);
 }
 
-getUserViaAsyncWait();
+initialize();
 

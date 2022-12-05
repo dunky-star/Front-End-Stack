@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  message =  `This is some random message demonstrating string interpolation - property binding.`;
+
+  getMessage(){
+    return this.message;
+  }
+
 }

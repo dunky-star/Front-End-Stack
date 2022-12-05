@@ -236,7 +236,7 @@ getUserViaFetch();
 
 function getUserViaAsyncWait(){
     fetch("https://jsonplaceholder.typicode.com/users/1")
-    . then (response => response.json());
+    .then (response => response.json());
 }
 
 async function initialize(){

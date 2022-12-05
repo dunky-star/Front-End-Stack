@@ -20,6 +20,8 @@ import { SafePipe } from './pipes/safe/safe.pipe';
     AppRoutingModule,
     CoreModule
   ],
+  exports: [],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent]
 })

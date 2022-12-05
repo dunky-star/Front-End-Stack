@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  message =  `This is some random message demonstrating string interpolation - data binding.`;
+  message =  `This is some random message demonstrating string interpolation - data binding`;
   messageBound =`Bound via proprty binding`;
 
   getMessage(){

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  message =  `This is some random message demonstrating string interpolation binding.`;
+  message =  `This is some random message demonstrating string interpolation - data binding.`;
 
 }

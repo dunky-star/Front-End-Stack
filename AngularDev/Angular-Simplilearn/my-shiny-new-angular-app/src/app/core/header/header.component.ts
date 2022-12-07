@@ -21,4 +21,13 @@ export class HeaderComponent {
   onKeyUp(keyUpEvent: any){
     keyUpEvent.code === 'Enter' && alert('Enter was pressed');
   }
+
+  title = "Angular";
+  counter = 0;
+  classToSet="positive";
+
+  onCounterChange(buttonType: string){
+    buttonType === "INC" ? this.counter++ : this.counter--;
+    this.classToSet = this.counter >= 0 ? "positive" : "negative";
+  }
 }

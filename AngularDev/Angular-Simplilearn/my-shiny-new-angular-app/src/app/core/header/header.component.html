@@ -4,3 +4,11 @@
 <p [innerText]="messageBound"></p>
 <button (click)="onClick()">Click me to run a function</button><br><br><br>
 <input (keyup)="onKeyUp($event)" type="text">
+
+
+  <!--Two ways data binding with counter-actions component-->
+  <h1>@Output</h1>
+  <p>The current vlaue of the counter is: <span [class]="classToSet">{{counter}}</span></p>
+<app-counter-actions>
+  [(counter)]="counter"
+</app-counter-actions>

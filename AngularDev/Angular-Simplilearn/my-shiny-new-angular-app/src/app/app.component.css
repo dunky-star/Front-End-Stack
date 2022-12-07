@@ -1,5 +1,11 @@
 /* You can add Global styles to this file, and also imports other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+body {
+  font-family: 'Bellefair', serif;
+}
+
 .container {
   max-width: 1080px;
   position: relative;
@@ -29,7 +35,7 @@ h1 {
 }
 
 #introduction p {
-  font-size: 25px;
+  font-size: 20px;
   color: #628F19;
   text-align: justify;
 }

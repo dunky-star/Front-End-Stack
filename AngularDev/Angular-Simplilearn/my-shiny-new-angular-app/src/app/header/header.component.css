@@ -28,7 +28,7 @@ h1 a {
   padding: 5px;
   font-size: 15px;
   color: #E36A0C;
-  /*background: white url(../img/search.png) right center no-repeat;*/
+  background: white url(/assets/img/search.png) right center no-repeat;
   border: 1px solid #C8D03E;
 }
 

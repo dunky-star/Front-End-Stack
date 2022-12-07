@@ -2,12 +2,11 @@ import { Text } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-core-app',
+  templateUrl: './core-app.component.html',
+  styleUrls: ['./core-app.component.css']
 })
-export class HeaderComponent {
-
+export class CoreAppComponent {
   message =  `This is some random message demonstrating string interpolation - data binding`;
   messageBound =`Bound via proprty binding`;
 

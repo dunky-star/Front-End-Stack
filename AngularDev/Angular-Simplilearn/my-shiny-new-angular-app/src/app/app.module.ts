@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { TransformDirective } from './transform.directive';
 import { SafePipe } from './pipes/safe/safe.pipe';
+import { NoteListComponent } from './note-list/note-list.component';
+import { NoteListItemComponent } from './note-list-item/note-list-item.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -14,7 +19,12 @@ import { SafePipe } from './pipes/safe/safe.pipe';
     AppComponent,
     UserComponent,
     TransformDirective,
-    SafePipe
+    SafePipe,
+    NoteListComponent,
+    NoteListItemComponent,
+    HomeComponent,
+    AboutComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

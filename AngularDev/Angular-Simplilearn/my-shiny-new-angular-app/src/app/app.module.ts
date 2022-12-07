@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { TransformDirective } from './transform.directive';
 import { SafePipe } from './pipes/safe/safe.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { SafePipe } from './pipes/safe/safe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+
   ],
   exports: [],
   entryComponents: [],

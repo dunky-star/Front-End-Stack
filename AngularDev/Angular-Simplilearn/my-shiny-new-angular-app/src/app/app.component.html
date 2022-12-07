@@ -1,25 +1,59 @@
 <!-- * * * * * * * * * * * The start * * * * * * * * * * * -->
 <div class="container">
-  <div class="styled">
-    <div id="header">
-      <h1>Angular starter page.</h1>
-      <!-- add the selector header component in the app component html -->
-      <app-header></app-header>
 
-      <div class="conatiner-fluid">
+    <!-- Starts header -->
+    <div id="header">
+        <div id="brand">
+          <h1><a href="#">Angular the Fun Way!</a></h1>
+        </div>
+        <div id="searchBox">
+          <form method="get">
+            <input type="text" class="text">
+            <input type="submit" value="Search a topic" class="submit">
+          </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Ends header -->
+    <!--=====================================
+        SECTION 1
+    ======================================-->
+
+          <!-- Starts Navigation Bar-->
+    <div id="menu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+
+      </ul>
+    </div>
+    <!-- Ends Navigation Bar-->
+
+    <!--=====================================
+      SECTION 2
+    ======================================-->
+
+    <!-- Starts section part -->
+
+      <div id="introduction">
         <!-- add the selector note-list component in the app component html -->
         <app-note-list></app-note-list>
       </div>
 
-      <!-- Footer -->
-    </div>
+      <!-- Starts Footer -->
+
+      <!--=====================================
+        SECTION 3
+      ======================================-->
+
     <div class="footer">
       <footer>
         <p>&copy; dunkygeoffrey39@gmail.com, all rights reserved.</p>
 
       </footer>
     </div>
-  </div>
+    <!-- Ends Footer -->
 
     <!-- * * * * * * * * * * * The End * * * * * * * * * * * -->
 

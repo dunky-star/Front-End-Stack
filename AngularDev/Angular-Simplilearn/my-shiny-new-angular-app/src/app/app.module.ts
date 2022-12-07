@@ -12,6 +12,7 @@ import { NoteListItemComponent } from './note-list-item/note-list-item.component
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { BlogComponent } from './blog/blog.component';
     NoteListItemComponent,
     HomeComponent,
     AboutComponent,
-    BlogComponent
+    BlogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

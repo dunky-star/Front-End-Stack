@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserComponent } from './user.component';
+import { BuiltInStrDirComponent } from './built-in-str-dir.component';
 
-describe('UserComponent', () => {
-  let component: UserComponent;
-  let fixture: ComponentFixture<UserComponent>;
+describe('BuiltInStrDirComponent', () => {
+  let component: BuiltInStrDirComponent;
+  let fixture: ComponentFixture<BuiltInStrDirComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserComponent ]
+      declarations: [ BuiltInStrDirComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UserComponent);
+    fixture = TestBed.createComponent(BuiltInStrDirComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

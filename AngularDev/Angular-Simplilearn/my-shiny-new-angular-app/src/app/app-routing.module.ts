@@ -1,6 +1,6 @@
-import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

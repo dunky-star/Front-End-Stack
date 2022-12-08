@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class BuiltInStrDirComponent {
 
+  messages: string[] = [
+    "Message 1",
+    "Message - where is Gulu?",
+    "Message 3 - where is Kampala?",
+    "Message 4 - come to Gulu.",
+    "Message 5 - Come to Kampala.",
+    "Message 6 - I have gone to Gulu."
+  ];
+
+
+
 }

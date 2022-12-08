@@ -18,6 +18,11 @@ export class BuiltInStrDirComponent {
     "Message 6 - I have gone to Gulu."
   ];
 
+  // using Angular pipes for output decorations.
+  dateToday: string = new Date().toDateString();
+
+
+
 
 
 }

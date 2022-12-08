@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,7 +33,8 @@ import { BuiltInStrDirComponent } from './components/built-in-str-dir/built-in-s
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   exports: [],

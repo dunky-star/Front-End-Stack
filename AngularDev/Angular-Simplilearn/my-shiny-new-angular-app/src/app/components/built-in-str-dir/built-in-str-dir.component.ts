@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BuiltInStrDirComponent {
 
+  showList: boolean = true;
+
   messages: string[] = [
     "Message 1",
     "Message - where is Gulu?",

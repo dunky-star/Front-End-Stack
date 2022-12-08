@@ -1,6 +1,9 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let message of messages; let i = index;" >
-      Index: {{i}}, Message: {{message}}
-  </li>
-</ul>
-
+<div *ngIf="showList">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let message of messages; let i = index;" >
+        Index: {{i}}, Message: {{message}}
+    </li>
+  </ul>
+</div>
+<hr>
+<button class="btn btn-primary" (click)="showList = !showList">Toggle List Visibility</button>

@@ -10,21 +10,19 @@ function logger() {
 
 logger() // Invoking | calling | running the function.
 
-
-function addXY(x, y) {
-    console.log(x, y);
+// Arrow function
+const addXY = (x, y) => {
     return x + y;
 }
-function subtractXY(x, y) {
-    console.log(x, y);
+const subtractXY = (x, y) => {
     return x - y;
 }
-function multiplyXY(x, y) {
-    console.log(x, y);
-    return x * y;
+
+// Normal function declaration
+function multiplyXYZ(x, y, z) {
+    return x * y * z;
 }
 function divideXY(x, y) {
-    console.log(x, y);
     return x / y;
 }
 
@@ -37,20 +35,16 @@ const operation = prompt(`Enter an opiton 1, 2, 3 or 4:
 
 switch (operation) {
     case '1':
-        const resultAdd = addXY(2, 2);
-        console.log('Addition result ' + resultAdd);
+        console.log('Addition result: ' + addXY(2, 2));
         break;
     case '2':
-        const resultSubtract = subtractXY(4, 2);
-        console.log('Substraction result ' + resultSubtract);
+        console.log('Substraction result: ' + subtractXY(4, 2));
         break;
     case '3':
-        const resultMultiply = multiplyXY(4, 2);
-        console.log('Multiplication result ' + resultMultiply);
+        console.log('Multiplication result: ' + multiplyXYZ(4, 2, 2));
         break;
     case '4':
-        const resultDivide = divideXY(10, 2);
-        console.log('Divide result ' + resultDivide);
+        console.log('Divide result: ' + divideXY(10, 2));
         break;
     default:
         console.log('Invalid input');

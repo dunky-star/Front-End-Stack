@@ -53,7 +53,7 @@ else {
 
 
 // Switch-Case statement
-const day = promt('What is your favorite day?');
+const day = prompt('What is your favorite day?');
 
 switch (day) {
     case 'monday':
@@ -77,3 +77,11 @@ switch (day) {
     default:
         console.log('Not a valid day!');
 }
+
+
+// Conditional (Ternary) Operator
+const age = 25;
+const drink = age >= 18 ? 'Wine🍷' : 'water 🥤';
+console.log(drink);
+console.log(`I like to drink ${age >= 18 ? 'Wine🍷' : 'water 🥤'}`);
+

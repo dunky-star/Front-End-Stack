@@ -19,10 +19,61 @@ const year = 2040;
 const jonasNew = `I'm ${firstName}, a ${year - birthYearJonas} year old ${job}`;
 console.log(jonasNew);
 
-// Handling keyborad input
+// Handling keyborad input and Type conversion.
+// Because of Strict Equality - Type Coercion cannot work.
+/*
 const favoriteNum = Number(prompt(`What's your favorite number?`));
+
 if (favoriteNum === 23) {
-    console.log(`Cool ${favoriteNUm} is an amazing number.`);
+    console.log(`Cool, ${favoriteNum} is an amazing number.`);
+} else if (favoriteNum === 10) {
+    console.log(`Cool, ${favoriteNum} is an amazing number.`);
 } else {
-    console.log(`Type of favorite number is a` + ' ' + typeof favoriteNum);
+    console.log(`${favoriteNum} is not 23 or 10` + ' ' + typeof favoriteNum);
+}*/
+
+// Boolean Logic and Operators
+
+const scoreDolphins = (100 + 120 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+console.log(`The score of the two teams are Dolphins: ${scoreDolphins}, and Koalas:  ${scoreKoalas}`);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins wins the trophy✔");
+} else if (scoreDolphins < scoreKoalas && scoreKoalas >= 100) {
+    console.log("Koalas wins the trophy✔");
+
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100
+    && scoreKoalas >= 100) {
+    console.log("It's a draw!!!")
+}
+else {
+    console.log("Below required performance😥!!!")
+}
+
+
+// Switch-Case statement
+const day = promt('What is your favorite day?');
+
+switch (day) {
+    case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thrusday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log('Not a valid day!');
 }

@@ -179,10 +179,19 @@ console.log(jonas.getSummary()); // Function call
 //     console.log(jonas[i]);
 // }
 
-// Looping through an array backward
+// Looping through an array backward/ in reverse
 const numArr = [1, 2, 4, 6, 10, 20, 30, 50, 66, 70, 1000];
 for (let i = numArr.length - 1; i >= 0; i--) {
-    console.log(numArr[i]);
+    console.log(`Position ${i}th array is: ${numArr[i]}`);
+}
+
+
+// Inner Loops
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`_____starting exercise ${exercise}`);
+    for (let rep = 0; rep < 5; rep++) {
+        console.log(`Lifting weight repetition ${rep}🏋️‍♂️`);
+    }
 }
 
 

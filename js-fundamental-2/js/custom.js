@@ -175,8 +175,14 @@ console.log(jonas.getSummary()); // Function call
 * Loops: Allow us to automate repetitive tasks over and over again.
 * One of the most useful feature of a "For loop" is to loop through array.
 */
-for (let i = 0; i < jonas.length; i++) {
-    console.log(jonas[i]);
+// for (let i = 0; i < jonas.length; i++) {
+//     console.log(jonas[i]);
+// }
+
+// Looping through an array backward
+const numArr = [1, 2, 4, 6, 10, 20, 30, 50, 66, 70, 1000];
+for (let i = numArr.length - 1; i >= 0; i--) {
+    console.log(numArr[i]);
 }
 
 
@@ -188,4 +194,8 @@ let dice = Math.trunc(Math.random() * 6) + 1;
 
 while (dice !== 6) {
     console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {
+        console.log("Dice is 6, you won...");
+    }
 }

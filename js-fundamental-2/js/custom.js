@@ -10,7 +10,7 @@ function logger() {
 
 logger() // Invoking | calling | running the function.
 
-// Arrow function
+// Arrow Function
 const addXY = (x, y) => {
     return x + y;
 }
@@ -18,11 +18,13 @@ const subtractXY = (x, y) => {
     return x - y;
 }
 
-// Normal function declaration
+// Normal Function Declaration
 function multiplyXYZ(x, y, z) {
     return x * y * z;
 }
-function divideXY(x, y) {
+
+// Function Expression
+const divideXY = function (x, y) {
     return x / y;
 }
 

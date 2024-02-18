@@ -89,8 +89,8 @@ console.log("Friends array length: " + friends.length);
 console.log("Last element of the friends array: " + friends[friends.length - 1])
 
 const firstName = "Jonas";
-const jonas = [firstName, "Schmedtmann", 2037 - 1988, "teacher", friends];
-console.log("Jonas detail: " + jonas);
+const jonass = [firstName, "Schmedtmann", 2037 - 1988, "teacher", friends];
+console.log("Jonas detail: " + jonass);
 
 
 // Array operations
@@ -134,28 +134,58 @@ console.log("Ages: " + ages);
 * Use arrays for more ordered data and use objects for unstructured data.
 */
 
-const jonasObject = {
+const jonas = {
     firstName: "Jonas",
     lastName: "Schmedtmann",
-    ages: 2037 - 1988,
+    birthYear: 1988,
     job: "teacher",
-    friends: ["Duncan", "Peter", "Charles", "Bob"]
+    friends: ["Duncan", "Peter", "Charles", "Bob"],
+    hasDriversLicense: true,
+    // Any function that is attached to an object is called object method.
+    calcAge: function () {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} -year old ${this.job} and he has
+        ${this.hasDriversLicense ? 'a' : 'no'} diver's license.`
+    }
 }
 
-console.log(jonasObject);
+console.log(jonas);
 
-jonasObject.location = 'Iowa';
-jonasObject['twitter'] = '@jonaschmedtmann';
+jonas.location = 'Iowa';
+jonas['twitter'] = '@jonaschmedtmann';
 
-console.log(jonasObject);
+console.log(jonas);
 
-console.log("Jonas Last name: " + jonasObject.lastName);
+console.log("Jonas last name: " + jonas.lastName);
 // Bracket notation helps when we want to compute a value on an object
-console.log("Jonas First name: " + jonasObject['firstName'])
+console.log("Jonas first name: " + jonas['firstName'])
 
 // Jonas has 3 friends, and his best friend is called Duncan.
-console.log(`${jonasObject.firstName} has ${jonasObject.friends.length} friends, 
-and his best frined is called ${jonasObject.friends[0]}`);
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, 
+and his best frined is called ${jonas.friends[0]}`);
+
+console.log(jonas.getSummary()); // Function call
 
 
+/*
+* Loops: Allow us to automate repetitive tasks over and over again.
+* One of the most useful feature of a "For loop" is to loop through array.
+*/
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i]);
+}
 
+
+/*
+* "WHILE loop" -> Is used where there is no use case for a counter like rolling a dice problem.
+*/
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+}

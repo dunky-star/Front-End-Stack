@@ -254,7 +254,7 @@ const calcTempAmplitude2Arrays = function (temps1, temps2) {
   let minNew = temps2Array[0];
 
   for (let i = 0; i < temps2Array.length; i++) {
-    let currTemp = temps2Array;
+    let currTemp = temps2Array[i];
     if (typeof currTemp !== 'number') continue;
     if (currTemp > maxNew) {
       maxNew = currTemp;

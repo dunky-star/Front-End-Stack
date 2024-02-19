@@ -206,3 +206,66 @@ while (dice !== 6) {
     console.log('Dice is 6, you won...');
   }
 }
+
+/*
+ * We work for a company building a smart home thermometer.
+ * Our most recent task is this -> "Given an array of temperature of one day",
+ * Problem 1:
+ * calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error.
+ *
+ */
+const temperature = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+// SOLN:
+// amplitude = (max - min) temp
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    if (typeof temps[i] !== 'number') continue;
+    if (temps[i] > max) {
+      max = temps[i];
+    }
+    if (temps[i] < min) {
+      min = temps[i];
+    }
+  }
+  console.log(`Maximum temperature: ${max}, Minimum temperature: ${min}`);
+  return max - min;
+};
+
+const amplitude = calcTempAmplitude(temperature);
+console.log(`The temperature amplitude is: ${amplitude}`);
+
+/*
+ * Problem 2: The function should now accept two arrays and return temperature amplitude.
+ */
+
+const temperature1 = [10, -20, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 15];
+const temperature2 = [20, -20, -8, -30, 'error', 10, 18, 19, 23, 14, 9, 15];
+
+// SOLN:
+// amplitude = (max - min) temp
+const calcTempAmplitude2Arrays = function (temps1, temps2) {
+  const temps2Array = temps1.concat(temps2);
+
+  let maxNew = temps2Array[0];
+  let minNew = temps2Array[0];
+
+  for (let i = 0; i < temps2Array.length; i++) {
+    let currTemp = temps2Array;
+    if (typeof currTemp !== 'number') continue;
+    if (currTemp > maxNew) {
+      maxNew = currTemp;
+    }
+    if (currTemp < minNew) {
+      minNew = currTemp;
+    }
+  }
+  console.log(`Maximum temperature: ${maxNew}, Minimum temperature: ${minNew}`);
+  return maxNew - minNew;
+};
+
+const amplitude2Arrays = calcTempAmplitude2Arrays(temperature1, temperature2);
+console.log(`The temperature amplitude is: ${amplitude2Arrays}`);

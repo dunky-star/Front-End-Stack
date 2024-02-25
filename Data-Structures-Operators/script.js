@@ -5,6 +5,21 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -12,20 +27,7 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  openingHours,
 
   order: function (i, j) {
     return [this.starterMenu[i], this.mainMenu[j]];
@@ -54,14 +56,14 @@ const {
 console.log(o, c);
 
 // orderDelivery
-const orderDeliv = restaurant.orderDelivery({
+restaurant.orderDelivery({
   time: '22:30',
   address: 'Vin Del Sole, 21',
   mainIndex: 2,
   starterIndex: 2,
 });
 
-console.log(orderDeliv);
+//console.log(orderDeliv);
 
 // SPREAD, because on the right side of =
 const arr = [1, 2, ...[3, 4]];
@@ -69,3 +71,27 @@ const arr = [1, 2, ...[3, 4]];
 // REST, because on the left side of =
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFoods] = [
+  ...restaurant.starterMenu,
+  ...restaurant.mainMenu,
+];
+
+console.log(pizza, risotto, otherFoods);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// Function that takes arbitrary number of arguments as arrays
+const addNumbers = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(`The sum of numbers = ${sum}`);
+};
+
+addNumbers(2, 3);
+addNumbers(5, 3, 7, 2);
+addNumbers(8, 2, 5, 3, 2, 1, 4);

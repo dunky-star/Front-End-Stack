@@ -95,3 +95,35 @@ const addNumbers = function (...numbers) {
 addNumbers(2, 3);
 addNumbers(5, 3, 7, 2);
 addNumbers(8, 2, 5, 3, 2, 1, 4);
+
+// Optional chaining with Nullish Coalescing
+const users = [
+  { firstName: 'Geoffrey', email: 'dunky@mail.com' },
+  { firstName: 'Arma', email: 'army@testmail.com' },
+];
+
+console.log(
+  `User no.1 first name: ${users[0]?.firstName ?? 'Users array empty'}`
+);
+
+// Looping over object
+const properties = Object.keys(openingHours);
+// property KEYS
+let openStr = `We are open on ${properties.length} 
+days: `;
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire OBJECT
+const entries = Object.entries(openingHours);
+for (const [key, { open, close }] of entries) {
+  console.log(
+    `On ${key}, we are open at ${open} hrs and close at ${close} hrs`
+  );
+}

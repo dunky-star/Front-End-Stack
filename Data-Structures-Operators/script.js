@@ -26,4 +26,46 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (i, j) {
+    return [this.starterMenu[i], this.mainMenu[j]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
+
+// Receive 2 return values from a function
+const [starter, main] = restaurant.order(2, 0);
+console.log(starter, main);
+
+// Nested Objects
+const {
+  fri: { open: o, close: c },
+} = restaurant.openingHours;
+console.log(o, c);
+
+// orderDelivery
+const orderDeliv = restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Vin Del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+console.log(orderDeliv);
+
+// SPREAD, because on the right side of =
+const arr = [1, 2, ...[3, 4]];
+
+// REST, because on the left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);

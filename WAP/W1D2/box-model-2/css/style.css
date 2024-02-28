@@ -1,5 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');*/
-
 * {
   margin: 0;
   padding: 0;
@@ -7,47 +5,54 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+
   /* background-color: #60b347; */
 }
 
-.div--1 {
-  border: 1px solid #60b347;
-  margin: 10px;
-  font-size: 2rem;
-  font-family: inherit;
-  /*padding: 2rem 3rem;*/
+.container {
+  max-width: 1080p;
+  width: 95%;
+  margin: 0 auto;
 }
 
-.div--2 {
-  border: 1px solid red;
-  margin: 10px;
-  font-size: 2rem;
-  font-family: inherit;
+.thumbnail {
+  padding: 5px;
+  margin: 5px;
 }
 
-.div--3 {
-  border: 1px solid black;
-  margin: 10px;
-  font-size: 2rem;
-  font-family: inherit;
+.right {
+  float: right;
 }
-
-.div--4 {
-  border: 1px solid black;
-  margin: 10px;
-  font-family: inherit;
-}
-
-img {
+.left {
   float: left;
-  width: 100px;
-  height: 100px;
+}
+h3 {
+  margin: 10px;
+}
+.myImage {
+  width: 300px;
+  height: 60px;
+}
+.in--between-1 {
+  margin: 10px;
+}
+.in--between-2 {
+  margin: 10px;
+}
+
+.in--between-3 {
+  display: flex;
+  margin: 10px;
+}
+
+.in--between-4 {
+  display: flex;
   margin: 10px;
 }
 

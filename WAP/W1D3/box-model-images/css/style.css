@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 90%;
+  /*box-sizing: border-box;*/
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400px;
+  height: 100vh;
+  /*background-color: #333;*/
+  line-height: 1.5;
+  color: #eee;
+  /*position: relative;*/
+  /*background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+.container {
+  text-align: center;
+}
+
+img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 10px;
+}

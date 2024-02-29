@@ -4,63 +4,65 @@
   box-sizing: inherit;
 }
 html {
-  font-size: 90%;
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400px;
+  font-weight: 1rem;
   height: 100vh;
   color: #333;
   line-height: 1.5;
   background-color: #eea596;
 }
+ul {
+  list-style: none;
+}
 
 .container {
-  max-width: 1080px;
-  width: 98%;
-  margin: auto;
+  max-width: 108rem;
+  margin: 0 auto;
 }
 
 .nav {
-  margin: 10px;
+  margin: 1rem;
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   justify-content: space-between;
-}
-
-h3 {
-  text-decoration: none;
-}
-
-.links a {
-  text-decoration: none;
-  display: inline-block;
-  gap: 20px;
-  padding: 10px;
+  font-size: 1.5rem;
 }
 
 .contact--1 {
-  border: 1px solid #333;
+  border: 0.1rem solid #333;
+  padding: 0.2rem;
 }
 
-.links a:hover {
-  color: blue;
+a:link {
+  text-decoration: none;
+  display: inline-block;
+  gap: 2rem;
+  padding: 1rem;
 }
 
-.links a:visited {
-  color: #fff;
+a:hover {
+  color: #333;
+  text-decoration: underline #fff;
 }
 
-.links a:active {
+a:visited {
   color: #333;
 }
 
+a:active {
+  color: #333;
+  background-color: blue;
+}
+
 .div--1 img {
-  width: 400px;
-  height: 400px;
+  width: 40rem;
+  height: 40rem;
   object-fit: cover;
-  margin: 10px;
+  margin: 1rem;
   border-radius: 50%;
   position: absolute;
 }
@@ -71,23 +73,25 @@ h3 {
 
 .combined--images {
   display: flex;
+  position: relative;
 }
 
 .text--1 {
   position: relative;
-  margin-top: 90px;
-  margin-left: 450px;
+  margin-top: 9rem;
+  margin-left: 45rem;
+  font-size: 2rem;
 }
 
 .div--3 {
   position: relative;
-  margin-top: 350px;
-  margin-left: 50px;
+  margin-top: 36rem;
+  margin-left: 18rem;
 }
 
 .div--3 img {
-  width: 200px;
-  height: 100px;
+  width: 30rem;
+  height: 10rem;
   object-fit: cover;
-  margin: 10px;
+  margin: 1rem;
 }

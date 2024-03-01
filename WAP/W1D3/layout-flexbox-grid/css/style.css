@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 4rem;
+  line-height: 1.5;
+  font-size: 3.2rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 1rem auto;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+}
+
+.el {
+  /*
+    flex-grow: 0;
+    flex-shrink: 1;
+    */
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.el--1 {
+  background-color: blueviolet;
+  align-self: flex-start;
+}
+.el--2 {
+  background-color: orangered;
+}
+.el--3 {
+  background-color: green;
+  height: 15rem;
+}
+.el--4 {
+  background-color: goldenrod;
+}
+.el--5 {
+  background-color: palevioletred;
+  align-self: stretch;
+  order: 1;
+}
+.el--6 {
+  background-color: steelblue;
+  order: -1;
+}
+.el--7 {
+  background-color: yellow;
+}
+.el--8 {
+  background-color: crimson;
+  align-self: flex-end;
+}

@@ -45,20 +45,56 @@ console.log('last element/ Modern method: ' + letters.at(-1));
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log('\nUsing for and of to loop through an array');
-for (const movement of movements) {
+
+for (const [i, movement] of movements.entries()) {
   if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+    console.log(`Movement ${i + 1}, you deposited: ${movement}`);
   } else {
-    console.log(`You withdrew ${movement}`);
+    console.log(`Movement ${i + 1}, you withdrew ${Math.abs(movement)}`);
   }
 }
 
-console.log('\nUsing forEach to loop through an array');
+// CONTINUE and BREAK keywords doesn't work with forEach atall.
+console.log('\n---FOREACH---');
 
-movements.forEach(function (movement) {
-  if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}, you deposited: ${mov}`);
   } else {
-    console.log(`You withdrew ${movement}`);
+    console.log(`Movement ${i + 1}, you withdrew ${Math.abs(mov)}`);
   }
 });
+
+// forEach and Map
+
+console.log('---forEach and Map (Key-value pair)---');
+
+const currencies = new Map([
+  ['USD', 'United States Dollar'],
+  ['GPB', 'British Pound Sterlings'],
+  ['UGX', 'Uganda Shillings'],
+  ['AED', 'UAE Dihram'],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`Key: ${key} -> value: ${value}`);
+});
+
+const checkDogs = function (dogJulia, dogKate) {
+  const dogsJuliaCorrected = dogJulia.slice(); // Making a shallow copy
+  dogsJuliaCorrected.splice(0, 1);
+  dogsJuliaCorrected.splice(-1);
+
+  const dogs = dogsJuliaCorrected.concat(dogKate);
+  console.log(dogs);
+
+  dogs.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(`Dog number ${i + 1} is an adult and is ${dog} years old.`);
+    } else {
+      console.log(`Dog number ${dog} is still a puppy🐶`);
+    }
+  });
+};
+
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.hero {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  padding-bottom: 1rem;
+}
+
+.about-1 {
+  display: flex;
+}
+.about-1-2 {
+  margin-top: 4rem;
+  margin-left: 0.3rem;
+}
+.about-2 {
+  display: flex;
+}
+.about-2-2 {
+  margin-top: 4rem;
+  margin-left: 0.3rem;
+}
+
+.tweets-1 {
+  display: flex;
+}
+.tweets-2 {
+  display: flex;
+}
+.tweets-3 {
+  display: flex;
+}
+.instagram-1 {
+  display: flex;
+  gap: 1rem;
+}
+.instagram-2 {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-footer {
+  border-top: 0.1rem solid #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.logo {
+  margin-top: 2rem;
+}
+
+img {
+  width: 3rem;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.instagram img {
+  width: 10rem;
+  height: 5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.tweets p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+p {
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+}
+
+h5 {
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+}
+/* 
+@media only screen and (min-width: 600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  hero {
+    margin-left: 25%;
+  }
+}  applies to any screen
+600px or larger -- favor this */
+
+table,
+td,
+th {
+  border: 0.1rem solid #333;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+table {
+  text-indent: initial;
+  border-spacing: 0.2rem;
+  width: 100%;
+}
+
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}

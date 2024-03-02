@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.some-info-1 {
+  display: flex;
+  gap: 5rem;
+}
+
+.aside--1 {
+  background-color: #d3d3d3;
+  padding: 2rem;
+  max-width: 30rem;
+}
+
+.article--1 {
+  margin-left: 2rem;
+}
+.diseases-table {
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 22rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.images {
+  display: flex;
+  gap: 2rem;
+}
+
+.color-header p {
+  background-color: #f08080;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.some-info-span p {
+  /*font-weight: 400;*/
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.disease-h5-span p {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+table,
+td,
+th {
+  border: 0.1rem solid #333;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+table {
+  text-indent: initial;
+  border-spacing: 0.2rem;
+  width: 100%;
+}

@@ -237,4 +237,13 @@ const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
 
 // Array of Objects.
-console.log();
+console.log(accounts);
+
+const bankDeposit = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((acc, element) => acc + element, 0);
+
+console.log(
+  `Total deposit recorded in different owners' accounts: $${bankDeposit}`
+);

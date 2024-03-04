@@ -122,6 +122,36 @@ console.log(`The longest word are: ${filterLongWords(wordArray, 6)}`);
 /* 8.	Implement indexOf, lastIndexOf, includes, split using for loops without
  * built-in functions for strings and arrays.
  */
+ 
+ // Index of
+function customIndexOf(str, target) {
+  for (let i = 0; i < str.length; i++) {
+    // Iterate through each character in the input String
+    let match = true;
+
+    for (let j = 0; j < target.length; j++) {
+      if (str[i + j] !== target) {
+        match = false;
+        break;
+      }
+    }
+    // If a match if found, return the index
+    if (match) {
+      return i;
+    }
+  }
+  // If no match is found, return -1
+  return -1;
+}
+
+console.log(
+  `The index of the occurrence of the search element : ${customIndexOf(
+    'Geoffrey',
+    'f'
+  )}`
+);
+
+
 
 // lastIndexOf
 
@@ -165,33 +195,85 @@ function splitStr(str, delimiter) {
 
 console.log(`The splitted string result: ${splitStr('Hello', ',')}`);
 
-// Index of
-function customIndexOf(str, target) {
-  for (let i = 0; i < str.length; i++) {
-    // Iterate through each character in the input String
-    let match = true;
 
-    for (let j = 0; j < target.length; j++) {
-      if (str[i + j] !== target) {
-        match = false;
-        break;
-      }
+
+function customSlice(inputArray, start, end) {
+    // Handle negative start index
+    start = start >= 0 ? start : Math.max(inputArray.length + start, 0);
+
+    // Handle negative end index
+    end = end !== undefined ? end : inputArray.length;
+    end = end >= 0 ? Math.min(end, inputArray.length) : inputArray.length + end;
+
+    // Initialize an array to store the sliced elements
+    var result = [];
+
+    // Iterate through the input array and push elements to the result array
+    for (var i = start; i < end; i++) {
+        result.push(inputArray[i]);
     }
-    // If a match if found, return the index
-    if (match) {
-      return i;
-    }
-  }
-  // If no match is found, return -1
-  return -1;
+
+    return result;
 }
 
-console.log(
-  `The index of the occurrence of the search element : ${customIndexOf(
-    'Geoffrey',
-    'f'
-  )}`
-);
+// Example usage
+var inputArray = [1, 2, 3, 4, 5];
+var startIndex = 1;
+var endIndex = 4;
+var slicedArray = customSlice(inputArray, startIndex, endIndex);
+
+console.log(slicedArray); // Output: [2, 3, 4]
+
+
+
+function customSplice(inputArray, start, deleteCount, ...itemsToAdd) {
+    // Handle negative start index
+    start = start >= 0 ? start : Math.max(inputArray.length + start, 0);
+
+    // Ensure deleteCount is within bounds
+    deleteCount = Math.min(Math.max(0, deleteCount), inputArray.length - start);
+
+    // Extract the removed elements
+    var removedElements = [];
+    for (var i = 0; i < deleteCount; i++) {
+        removedElements.push(inputArray[start + i]);
+    }
+
+    // Create a new array with the items before the start index
+    var result = inputArray.slice(0, start);
+
+    // Add new items to the result array
+    for (var j = 0; j < itemsToAdd.length; j++) {
+        result.push(itemsToAdd[j]);
+    }
+
+    // Add remaining items after the removed elements
+    for (var k = start + deleteCount; k < inputArray.length; k++) {
+        result.push(inputArray[k]);
+    }
+
+    // Update the original array
+    for (var l = 0; l < result.length; l++) {
+        inputArray[l] = result[l];
+    }
+
+    // Trim or extend the array if needed
+    inputArray.length = result.length;
+
+    return removedElements;
+}
+
+// Example usage
+var inputArray = [1, 2, 3, 4, 5];
+var startIndex = 1;
+var deleteCount = 2;
+var itemsToAdd = 6, 7;
+var removedElements = customSplice(inputArray, startIndex, deleteCount, itemsToAdd);
+
+console.log(inputArray);        // Output: [1, 6, 7, 4, 5]
+console.log(removedElements);   // Output: [2, 3]
+
+
 
 /*
  * Array Destructuring

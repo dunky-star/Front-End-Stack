@@ -9,6 +9,16 @@ let firstLetter = s.charAt(0);
 let lastLetter = s.charAt(s.length - 1);
 17;
 
+// Find an element in an array
+function findElement(array, myElement) {
+  for (let element of array) {
+    if (element === myElement) {
+      return true;
+    }
+  }
+  return false;
+}
+
 const studentAnswers = [
   [1, 1, 2, 4],
   [2, 1, 2, 2],
@@ -42,6 +52,7 @@ function scoreForecasts(forecast, observed) {
     let difference = eachForecast - observed[index];
     //convert the difference to positive integer
     difference = difference > 0 ? difference : difference * -1;
+
     if (difference <= 2) percentArray.push(100);
     else if (difference <= 5) percentArray.push(80);
     else if (difference <= 10) percentArray.push(60);
@@ -70,7 +81,7 @@ let testArr1 = [
 ];
 console.log(firstRowColSum(testArr1));
 
-// Find Get the Oldest person age
+// Get the Oldest person age
 // findOldestPerson[{name:’Ram’,age:20},
 //  {name:’Lakshman’,age:15}]=>Ram
 

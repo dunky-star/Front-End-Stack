@@ -7,7 +7,6 @@ console.log(fName);
 //const firstLetter = s[0];
 let firstLetter = s.charAt(0);
 let lastLetter = s.charAt(s.length - 1);
-17;
 
 // Find an element in an array
 function findElement(array, myElement) {

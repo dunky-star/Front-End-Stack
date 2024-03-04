@@ -69,7 +69,7 @@ console.log(reverseString('string')); //gnirts
 
 function changeString(string) {
   let str = string.charAt(1);
-  if (str == 'a') return string.charAt(0) + 'b' + string.substring(2);
+  if (str === 'a') return string.charAt(0) + 'b' + string.substring(2);
   return string;
 }
 console.log(changeString('wap'));

@@ -194,7 +194,7 @@ const totalDepositInUsd = function (deposit) {
     .filter(mov => mov > 0)
     .map(mov => mov * eurToUsd)
     .reduce((acc, mov) => acc + mov, 0);
-  console.log(totalDeposit);
+  return totalDeposit;
 };
 
 totalDepositInUsd(movements);
@@ -247,3 +247,30 @@ const bankDeposit = accounts
 console.log(
   `Total deposit recorded in different owners' accounts: $${bankDeposit}`
 );
+
+const depositGt1000 = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov >= 1000).length;
+
+console.log(
+  `Total number of deposit amount greater >= 1000 in the accounts: ${depositGt1000} dep`
+);
+
+// this is a nice title -> This Is a Nice Title
+const convertTitleCase = function (title) {
+  const capitzalize = str => str[0].toUpperCase() + str.slice(1);
+
+  const exceptions = ['a', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word => (exceptions.includes(word) ? word : capitzalize(word)))
+    .join(' ');
+
+  return capitzalize(titleCase);
+};
+
+console.log(convertTitleCase('this is a nice title'));
+console.log(convertTitleCase('this is a LONG title but not too long'));
+console.log(convertTitleCase('and here is another title with an EXAMPLE'));

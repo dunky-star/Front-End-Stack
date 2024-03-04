@@ -9,7 +9,7 @@ console.log(sum([1, 2, 3]));
 
 function findElement(array, myElement) {
   for (let ele of array) {
-    if (ele == myElement) return true;
+    if (ele === myElement) return true;
   }
   return false;
 }
@@ -23,15 +23,15 @@ console.log(findElement(['a', 'b'], 'a'));
 
 function createSet(myArray) {
   let newArray = [];
-  for (let ele of myArray) {
+  for (let element of myArray) {
     let found = false;
-    for (let inner of newArray) {
-      if (ele === inner) {
+    for (let elementNewArray of newArray) {
+      if (element === elementNewArray) {
         found = true;
         break;
       }
     }
-    if (!found) newArray.push(ele);
+    if (!found) newArray.push(element);
   }
   return newArray;
 }

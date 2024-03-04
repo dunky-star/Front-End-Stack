@@ -1,3 +1,5 @@
+'use strict';
+
 function sum(myArray) {
   let sum = 0;
   for (let ele of myArray) {
@@ -50,7 +52,7 @@ console.log(createSet(['cider', 'banana', 'apple']));
 
 function changeArray(myArray) {
   let element = myArray.pop();
-  if (element % 4 == 0) myArray.unshift(element);
+  if (element % 4 === 0) myArray.unshift(element);
   return myArray;
 }
 console.log(changeArray([10, 20, 3, 4]));

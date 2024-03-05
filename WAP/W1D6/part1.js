@@ -135,7 +135,7 @@ function customIndexOf(str, target) {
         break;
       }
     }
-    // If a match if found, return the index
+    // If a match is found, return the index
     if (match) {
       return i;
     }

@@ -26,7 +26,7 @@ const studentAnswers = [
 const correctAnswers = [3, 1, 2, 4];
 
 const scoreExams = function (studentAnswers, correctAnswers) {
-  scores = [];
+  let scores = [];
   for (let student of studentAnswers) {
     let i = 0;
     let score = 0; // score of each student
@@ -35,7 +35,7 @@ const scoreExams = function (studentAnswers, correctAnswers) {
         score++;
       }
     }
-    socres.push(score);
+    scores.push(score);
   }
   return scores;
 };

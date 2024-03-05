@@ -40,16 +40,17 @@ console.log(listAllCategories(array2)); //[ 'tools', 'Furniture' ]
 
 // Number 1 (b)
 const highestRatedCategory = function (...array) {
-  let highlyRatedCategory = [];
+  let highlyRatedCategory = '';
   let i = 0;
   let highestRating = 0;
   for (let element of Object.values(...array)) {
+    //console.log(element);
     if (element.rating > highestRating) {
       highestRating = element.rating;
-      highlyRatedCategory.push(element.category);
+      highlyRatedCategory = element.category;
     }
 
-    i++;
+    //i++;
   }
   return highlyRatedCategory;
 };

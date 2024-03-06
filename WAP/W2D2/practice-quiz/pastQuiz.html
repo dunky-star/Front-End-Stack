@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>practice test</title>
+
+    <style>
+        .result {
+            font-size: larger;
+            color: green;
+        }
+    </style>
+
+    <script>
+        function unhideBlock() {
+            $('#contentDiv').css('display', 'block');
+            $('#introDiv').css('display', 'none');
+        }
+        let userArray = [];
+        let counter = 0;
+        function submit() {
+            resultDiv = $('#displayResults').html('')
+            resultDiv.addClass('result');
+
+            //get Name value
+            let nameValue = $('#name').val();
+            //get Country details
+            let countryCollection = $('select[name="location"] option:selected');
+            let country = [];
+            countryCollection.each(function (idx, ele) {
+                country.push($(ele).val());
+            })
+
+            //storing the values in an Array
+            userArray.push([nameValue, country]);
+            counter++;
+            console.log(userArray);
+
+            //display on screen
+            resultDiv.append('<label>Added <strong>' + counter + '</strong> User(s) </label>')
+        }
+
+        function findAll() {
+            resultDiv = $('#displayResults').html('');
+            if (userArray.length == 0) {
+                resultDiv.append('<label>Added <strong>' + counter + '</strong> User(s) </label>')
+            } else {
+                for (ele of userArray) {
+                    resultDiv.append('<label>' + ele[0] + '</label>');
+                    for (el of ele[1]) {
+                        resultDiv.append(' <label>' + el + '</label>');
+                    }
+                    resultDiv.append('<br/>');
+                }
+            }
+        }
+
+        function FindUsersByLocation() {
+            resultDiv = $('#displayResults').html('');
+            if (userArray.length == 0) {
+                resultDiv.append('<label>Added <strong>' + counter + '</strong> User(s) </label>')
+            }
+            else {
+                let pickedLocation = $('select[name="location"] option:selected').val();
+                for (ele of userArray) {
+                    for (el of ele[1]) {
+                        if (el == pickedLocation) {
+                            resultDiv.append('<label>' + ele[0] + '</label>')
+                        }
+                    }
+                    resultDiv.append(' ');
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="introDiv" style="display: flex;justify-content: center;">
+        <input type="button" value="Add" onclick="unhideBlock()">
+    </div>
+    <div id="displayResults">
+
+    </div>
+    <div id="contentDiv"
+        style="display: grid;grid-template-columns: 20px 100px; gap: 30px; border: 1px solid blue;padding: 2%; display: none;">
+        <label for="">Name</label><input type="text" id="name">
+        <br>
+        <label for="">Location</label><select multiple name="location" id="">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Italy">Italy</option>
+        </select>
+        <div style="display: flex;gap:5px">
+            <input type="button" value="Submit" onclick="submit()">
+            <input type="button" value="FindAll" onclick="findAll()">
+            <input type="button" value="FindUsersByLocation" onclick="FindUsersByLocation()">
+        </div>
+    </div>
+</body>
+
+</html>

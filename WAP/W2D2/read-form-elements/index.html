@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Intro to DOM manipulation</title>
+  </head>
+  <body>
+    <div style="display: grid; grid-template-columns: 150px auto; gap: 20px">
+      Name<input type="text" id="name" />
+      Gender
+      <div>
+        <input type="radio" name="gender" value="male" checked />male
+        <input type="radio" name="gender" value="female" />female
+      </div>
+      Skills
+      <div>
+        <input type="checkbox" name="skills" value="java" />java
+        <input
+          type="checkbox"
+          name="skills"
+          value="javascript"
+          checked
+        />javascript
+      </div>
+      Country
+      <select name="singleselect">
+        <option value="usa">United States of America</option>
+        <option selected value="ca">Canada</option>
+      </select>
+
+      Random Options
+      <select multiple name="multiSelect">
+        <option selected>Option 1</option>
+        <option selected>Option 2</option>
+      </select>
+      <br />
+      Descripton
+      <textarea id="textAreaId">
+      Description
+      </textarea>
+    </div>
+    <button type="submit" id="btn--submit">Submit</button>
+    <hr />
+    <h5>Selected Values</h5>
+    <hr />
+    <div id="valueDiv"></div>
+    <script type="text/javascript" src="script.js"></script>
+    <noscript>
+      <p>Oops! This website requires a JavaScript-enabled browser.</p>
+    </noscript>
+  </body>
+</html>

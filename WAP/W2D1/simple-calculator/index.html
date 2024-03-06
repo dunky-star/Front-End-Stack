@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+      }
+      button {
+        width: 70px;
+        height: 30px;
+        margin: 10px;
+        color: #333;
+      }
+    </style>
+    <title>DOM manipulation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <label for="firstNumber">Enter input1:</label><br />
+    <input type="number" id="firstNumber" /><br />
+    <label for="secondNumber">Enter input2:</label><br />
+    <input type="number" id="secondNumber" /><br /><br />
+    <label for="operation">Choose operation:</label><br />
+    <select name="operation" id="operation">
+      <option value="addition">+</option>
+      <option value="multiply">*</option>
+      <option value="substract">-</option>
+      <option value="divide">/</option></select
+    ><br />
+    <button type="submit" id="btn__submit">Click</button><br />
+    <label for="result">Result:</label><br />
+    <input type="number" name="result" id="result" />
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <noscript>
+      <p>Oops! This website requires a JavaScript-enabled browser.</p>
+    </noscript>
+  </body>
+</html>

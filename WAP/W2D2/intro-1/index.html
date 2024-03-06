@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Intro to DOM manipulation</title>
+  </head>
+  <body>
+    <div id="square">
+      <p>DOM introduction</p>
+      <label for="Changeme">Change me:</label><br />
+      <input
+        type="text"
+        name="Changeme"
+        id="output"
+        value="Change me!"
+      /><br /><br />
+      <label for="swaptext">Swap me:</label><br /><br />
+      <span id="output2" class="highlighted">Hello there! I'm a span</span
+      ><br />
+      <input id="textbox2" type="text" name="swaptext" value="Goodbye" />
+      <pre id="target">Move the mouse over me</pre>
+      <br />
+      <label for="checkbox">Courses:</label>
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="java--check"
+        checked="checked"
+      />
+      Java
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="dbms--check"
+        checked="checked"
+      />
+      DBMS<br /><br />
+      <label for="radio">Entry:</label>
+      <input type="radio" id="freshman" />Freshman?
+      <input type="radio" id="oldstudent" />Continuing student?<br /><br />
+
+      <button id="btn--1">[OK]</button>
+      <button id="btn--change">[Change Text]</button>
+      <button id="btn--swap">[Swap Text]</button>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <noscript>
+      <p>Oops! This website requires a JavaScript-enabled browser.</p>
+    </noscript>
+  </body>
+</html>

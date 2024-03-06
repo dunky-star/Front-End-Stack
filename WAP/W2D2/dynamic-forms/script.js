@@ -32,6 +32,7 @@ function formDynamic() {
           score +
           '</label >';
       }
+
       html += '<br/>';
     }
   }

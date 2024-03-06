@@ -7,6 +7,27 @@
     <title>DOM Quiz - Trial</title>
   </head>
   <body>
+    <div>
+      <span id="valueDiv"></span>
+    </div>
+    <div style="border: 1px solid blue; padding: 10px; margin: 10px">
+      <div style="display: grid; grid-template-columns: 160px 200px; gap: 20px">
+        <label for="input-1">Name:</label>
+        <input type="text" id="name--1" name="input-1" />
+        <label for="input-1">Location:</label>
+        <select multiple name="multiSelect">
+          <option selected>USA</option>
+          <option>Canada</option>
+          <option>Italy</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <button id="btn--submit">Submit</button>
+        <button id="button--all">Find all</button>
+        <button id="button--user--loc">Find user by location</button>
+      </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
   <noscript>

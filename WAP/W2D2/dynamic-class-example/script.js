@@ -1,6 +1,10 @@
 let form = { name: 'Ram', skills: ['Java', 'JavaScript'] };
 
 $(document).ready(function () {
+  buildForm();
+});
+
+function buildForm() {
   let html = '';
   for (let key in form) {
     let value = form[key];
@@ -26,4 +30,4 @@ $(document).ready(function () {
   }
 
   $('body').append(html);
-});
+}

@@ -190,7 +190,7 @@ h2 span {
   text-transform: uppercase;
   font-family: arial;
   color: #ff3838;
-  animation: word-switch 7s infinite;
+  animation: word-switch 5s infinite;
 }
 
 @keyframes word-switch {

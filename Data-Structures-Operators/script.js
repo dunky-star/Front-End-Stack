@@ -84,7 +84,7 @@ const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
 // Function that takes arbitrary number of arguments as arrays
-const addNumbers = function (...numbers) {
+const print = function (...numbers) {
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) {
     sum += numbers[i];
@@ -92,9 +92,9 @@ const addNumbers = function (...numbers) {
   console.log(`The sum of numbers = ${sum}`);
 };
 
-addNumbers(2, 3);
-addNumbers(5, 3, 7, 2);
-addNumbers(8, 2, 5, 3, 2, 1, 4);
+print(2, 3);
+print(5, 3, 7, 2);
+print(8, 2, 5, 3, 2, 1, 4);
 
 // Optional chaining with Nullish Coalescing
 const users = [

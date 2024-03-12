@@ -1,17 +1,18 @@
 {
   "name": "express-routes",
   "version": "1.0.0",
-  "description": "Routes handling in Express",
-  "main": "index.js",
+  "description": "Handling routes in Express",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Geoffrey Duncan Opiyo",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.1.0"
-  },
   "dependencies": {
     "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

@@ -3,36 +3,18 @@ const path = require('path');
 
 const app = express();
 
+// Custome routes
+const adminData = require('./routes/admin');
+const loginRoutes = require('./routes/login');
+const homeRoutes = require('./routes/homepage');
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get('/add-user', (req, res, next) => {
-  res.sendFile(path.join(__dirname, './', 'views', 'add-user.html'));
-});
-app.post('/add-user', (req, res, next) => {
-  res.send({
-    username: req.body.username,
-    password: req.body.password,
-    age: req.body.age,
-  });
-  res.redirect('/');
-});
+app.use('/admin', adminData);
 
-app.get('/login', (req, res, next) => {
-  res.sendFile(path.join(__dirname, './', 'views', 'login.html'));
-});
-
-app.post('/login', (req, res, next) => {
-  res.send({
-    username: req.body.username,
-    password: req.body.password,
-  });
-  res.redirect('/add-user');
-});
-
-app.use('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname, './', 'views', 'index.html'));
-});
+app.use(loginRoutes.route);
+app.use(homeRoutes);
 
 app.use((req, res, next) => {
   res.sendFile(path.join('views', '404.html'));

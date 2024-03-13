@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review page</title>
+  </head>
+  <body>
+    <h2>Write a review</h2>
+    <img src="reviewimage.png" alt="Review Image" />
+    <form action="/review" method="POST">
+      <br /><br />
+      Rating <input type="radio" name="radioRating" value="3" id="radio1" />3
+      <input type="radio" name="radioRating" value="4" id="radio2" />4
+      <input
+        type="radio"
+        name="radioRating"
+        value="5"
+        id="radio3"
+      />5<br /><br />
+      Would you recommend this to a friend?
+      <select name="recommendation" id="recommendation">
+        <option selected="Yes" value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">May be</option></select
+      ><br /><br />
+      Comments <textarea name="comment" id="comment" rows="2"></textarea
+      ><br /><br />
+      <button type="submit">Submit</button><br /><br />
+      <a href="/result">See average rating</a>
+    </form>
+  </body>
+</html>

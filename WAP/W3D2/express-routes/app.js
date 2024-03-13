@@ -7,12 +7,14 @@ const app = express();
 const adminData = require('./routes/admin');
 const homeRoutes = require('./routes/homepage');
 const loginRoutes = require('./routes/login');
+const fruitRoutes = require('./routes/add-fruits');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(adminData.routes);
 app.use(homeRoutes);
+app.use(fruitRoutes);
 app.use(loginRoutes);
 
 app.use((req, res, next) => {

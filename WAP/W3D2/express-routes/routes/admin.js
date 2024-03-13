@@ -39,3 +39,4 @@ router.post('/add-user', (req, res, next) => {
 
 exports.routes = router;
 exports.users = users;
+exports.fruits = fruits;

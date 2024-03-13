@@ -16,12 +16,12 @@ app.use(homeRoutes);
 app.use(loginRoutes);
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join('views', '404.html'));
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
-// app.use((err, req, res, next) => {
-//   console.log(err.toString());
-//   res.status(500).send('<h1>Oops! Something went wrong</h1>');
-// });
+app.use((err, req, res, next) => {
+  console.log(err.toString());
+  res.status(500).send('<h1>Oops! Something went wrong</h1>');
+});
 
 app.listen(3000, () => console.log('Server started and running on port 3000'));

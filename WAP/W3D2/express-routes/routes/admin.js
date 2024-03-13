@@ -1,6 +1,9 @@
 const path = require('path');
 const express = require('express');
-
+// const options = {
+//   caseSensitive: false,
+//   strict: false,
+// };
 const router = express.Router();
 
 const users = [];
@@ -15,12 +18,6 @@ router.post('/add-user', (req, res, next) => {
     age: req.body.age,
   });
 
-  // res.send({
-  //   username: req.body.username,
-  //   password: req.body.password,
-  //   age: req.body.age,
-  // });
-  // userData.push(req.body);
   res.redirect('/');
 });
 

@@ -12,7 +12,7 @@ router.post('/login', (req, res, next) => {
     username: req.body.username,
     password: req.body.password,
   });
-  res.redirect('/');
+  res.redirect('/add-user');
 });
 
 module.exports = router;

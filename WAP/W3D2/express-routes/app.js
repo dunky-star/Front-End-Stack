@@ -11,9 +11,8 @@ const homeRoutes = require('./routes/homepage');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use('/admin', adminData);
-
-app.use(loginRoutes.route);
+app.use(adminData.routes);
+app.use(loginRoutes);
 app.use(homeRoutes);
 
 app.use((req, res, next) => {

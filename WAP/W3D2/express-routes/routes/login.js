@@ -16,17 +16,14 @@ router.post('/login', (req, res, next) => {
   let username = req.body.username;
   let password = req.body.password;
   let role = req.body.role;
-  for (let user of adminData.users) {
-    if (
-      adminData.users.username !== username &&
-      adminData.users.password !== password &&
-      adminData.users.role !== role
-    ) {
-      res.send('Wrong username /or password');
-    }
-  }
 
-  res.redirect('/add-user');
+  for (let user of adminData.users) {
+    if (user.username === username && user.password === password) {
+      res.redirect('/add-user');
+    } else {
+      res.send('<h1>Wrong username /or password</h1>');
+    }
+  } // End of 'For' Loop
 });
 
 module.exports = router;

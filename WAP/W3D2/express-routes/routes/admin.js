@@ -20,11 +20,11 @@ router.post('/add-user', (req, res, next) => {
   let role = req.body.role;
   for (let user of users) {
     if (
-      users.username === username &&
-      users.password === password &&
-      users.role === role
+      user.username === username &&
+      user.password === password &&
+      user.role === role
     ) {
-      res.send('User already exist');
+      res.send('<h1>User already exist</h1>');
     }
   }
 

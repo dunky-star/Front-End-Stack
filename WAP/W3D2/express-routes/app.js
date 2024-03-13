@@ -5,23 +5,23 @@ const app = express();
 
 // Custome routes
 const adminData = require('./routes/admin');
-const loginRoutes = require('./routes/login');
 const homeRoutes = require('./routes/homepage');
+const loginRoutes = require('./routes/login');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(adminData.routes);
-app.use(loginRoutes);
 app.use(homeRoutes);
+app.use(loginRoutes);
 
 app.use((req, res, next) => {
-  res.sendFile(path.join('views', '404.html'));
+  res.status(404).sendFile(path.join('views', '404.html'));
 });
 
-app.use((err, req, res, next) => {
-  console.log(err.toString());
-  res.status(500).send('<h1>Oops! Something went wrong</h1>');
-});
+// app.use((err, req, res, next) => {
+//   console.log(err.toString());
+//   res.status(500).send('<h1>Oops! Something went wrong</h1>');
+// });
 
 app.listen(3000, () => console.log('Server started and running on port 3000'));

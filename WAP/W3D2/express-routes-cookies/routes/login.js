@@ -5,7 +5,13 @@ const adminData = require('./admin');
 const router = express.Router();
 
 router.get('/login', (req, res, next) => {
-  res.render('login', { path: '/login', pageTitle: 'Login page' });
+  console.log(`Cookie value:${req.get('Cookie').split('=')[1]}`);
+  const isLoggedIn = req.get('Cookie').split('=')[1];
+  res.render('login', {
+    path: '/login',
+    pageTitle: 'Login page',
+    isAuthenticated: isLoggedIn,
+  });
 });
 
 router.post('/login', (req, res, next) => {
@@ -15,11 +21,11 @@ router.post('/login', (req, res, next) => {
   // });
   let username = req.body.username;
   let password = req.body.password;
-  let role = req.body.role;
 
   for (let user of adminData.users) {
     if (user.username === username && user.password === password) {
-      res.redirect('/add-user');
+      res.setHeader('Set-Cookie', 'loggedIn=true');
+      res.redirect('/');
     } else {
       res.send('<h1>Wrong username /or password</h1>');
     }

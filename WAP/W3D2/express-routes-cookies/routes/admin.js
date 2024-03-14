@@ -12,7 +12,11 @@ const users = [
 ];
 
 router.get('/add-user', (req, res, next) => {
-  res.render('add-user', { path: '/add-user', pageTitle: 'Add user page' });
+  res.render('add-user', {
+    path: '/add-user',
+    pageTitle: 'Add user page',
+    isAuthenticated: req.isLoggedIn,
+  });
 });
 router.post('/add-user', (req, res, next) => {
   let username = req.body.username;

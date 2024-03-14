@@ -11,6 +11,7 @@ router.get('/', (req, res, next) => {
     users: usersAdded,
     path: '/',
     pageTitle: 'Home page',
+    isAuthenticated: req.isLoggedIn,
   });
 });
 

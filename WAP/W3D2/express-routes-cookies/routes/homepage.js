@@ -6,8 +6,12 @@ const adminData = require('./admin');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  console.log(adminData.users);
-  res.render('home-page', { path: '/', pageTitle: 'Home page' });
+  let usersAdded = adminData.users;
+  res.render('home-page', {
+    users: usersAdded,
+    path: '/',
+    pageTitle: 'Home page',
+  });
 });
 
 module.exports = router;

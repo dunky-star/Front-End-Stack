@@ -13,6 +13,7 @@ router.get('/', (req, res, next) => {
     pageTitle: 'Home page',
     isAuthenticated: req.isLoggedIn,
   });
+  console.log(`req.isLoggedIn: ${req.isLoggedIn}`);
 });
 
 module.exports = router;

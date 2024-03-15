@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+const session = require('express-session');
 
 // Custome routes
 const adminData = require('./routes/admin');
@@ -15,6 +16,9 @@ app.set('views', 'views');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(
+  session({ secret: 'my secret', resave: false, saveUninitialized: false })
+);
 
 app.use(adminData.routes);
 app.use(homeRoutes);

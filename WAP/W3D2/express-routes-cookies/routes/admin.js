@@ -9,6 +9,7 @@ const router = express.Router();
 const users = [
   { username: 'geoffrey', password: 'qwerty', role: 'admin' },
   { username: 'brio', password: '123456', role: 'user' },
+  { username: 'dunky', password: '123', role: 'admin' },
 ];
 
 router.get('/add-user', (req, res, next) => {

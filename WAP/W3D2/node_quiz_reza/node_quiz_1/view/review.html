@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+</head>
+<body>
+    <h3>Write a review</h3>
+    <form action="/reviewdata" method="post">
+        <label>Rating</label> 
+        <input type="radio" name="point" value="1"/>1
+        <input type="radio" name="point" value="2"/>2
+        <input type="radio" name="point" value="3"/>3
+    </br>
+    </br>
+        <label>Would you recommand this to a friends?</label>
+        <select name="recommand">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe">May be</option>
+        </select>
+    </br>
+    </br>
+    <label>Comments</label>
+    <input type="text" name="Comments" />
+    </br>
+    </br>
+    <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>

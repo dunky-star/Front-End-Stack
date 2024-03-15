@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><% pageTitle %></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <h1>Welcome " Home " Page</h1>
+    <form action="/" method="POST">
+      <input type="text" name="flowers" id="add" />
+      <button type="submit" style="background-color: green; color: white">
+        [Add flowers]
+      </button>
+
+        <% for(const flower of flowers) { %>
+           <li><%= flower %></li>
+        <% } %>
+    </table>
+    </form>
+  </body>
+</html>

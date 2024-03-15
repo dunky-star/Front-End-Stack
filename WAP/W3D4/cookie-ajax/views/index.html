@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("/img/weather.jpeg");
+            color: yellow;
+            font-size: 20px;
+        }
+
+        div {
+            padding: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid white;
+        }
+
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            margin: 4px 2px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #myId {
+            background-color: lightpink;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function update() {
+            $.ajax("/update", {
+                "type": "POST",
+                "data": {
+                    weather: $("#myWeather").val()
+                },
+            });
+        }
+        function stopUpdates(){
+            clearInterval(interval);
+        }
+        let interval = setInterval(getAverage,3000)
+        function getAverage(){
+            $.ajax("/findAverage", {
+                "type": "GET"
+            }).done(function (avg) {
+                $("#myId").html(" Weather Forecast: "+avg+"F");
+                $("#myId").show();
+                setTimeout(function(){
+                    $("#myId").hide();
+                },1000)
+            });
+        }
+
+        function getHistory(){
+            $.ajax("/history", {
+                "type": "GET"
+            }).done(function (response) {
+                console.log("Heere",response)
+                $("#history").html(JSON.stringify(response));
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <p id="history"></p>
+    <div>
+        <p id="myId"></p>
+        <h1>Weather Update</h1>
+        Weather Source
+        <% for( let ele of apis) { %>
+            <input type="radio" value="<%=ele%>" />
+            <%=ele%>
+         <% } %>
+        <br /><br />
+        <input id='myWeather' type="text" />
+        <br />
+        <hr />
+        <button onclick="update()">Update</button>
+        <!-- <button onclick="getAverage()">Avg</button> -->
+        <button onclick="getHistory()">History</button>
+        <button onclick="stopUpdates()" style="background-color:grey;">Stop Update</button>
+    </div>
+
+
+</body>
+
+</html>

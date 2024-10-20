@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form action="/" method="post">
+      <% for(let key in obj){ %>
+      <label><%= key %></label>
+      <% if(!Array.isArray(obj[key])) { %>
+      <input type="text" name="<%= key%>" />
+      <% } else { %>
+
+      <select name="<%= key%>">
+        <% for( let item of obj[key]) { %>
+        <option><%= item%></option>
+        <% } %>
+      </select>
+      <% }%> <% }%>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

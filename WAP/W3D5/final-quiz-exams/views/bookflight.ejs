@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><% pageTitle %></title>
+  </head>
+  <body>
+    <h1>Book My Flight</h1>
+    <form action="/bookFlight" method="" POST>
+      <p>Available seat: <% flight.seats %></p>
+      No of seats:
+      <select name="seatNumber" id="seatNumber">
+        <% for (let i = 0; i < flight.length; i++) { %>
+        <option value="<% arr[i] %>"><% flight.seats %></option>
+        <% } %>
+      </select>
+      <br /><br />
+      <button type="submit">Book Now</button>
+    </form>
+  </body>
+</html>

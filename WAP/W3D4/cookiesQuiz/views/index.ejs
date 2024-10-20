@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $('#addToCartForm').submit(function () {
+        $('#myCart').show();
+      });
+    </script>
+    <style>
+      .displayClass {
+        visibility: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product Selection</h1>
+    <form action="/addToCart" method="post" id="addToCartForm">
+      <label>
+        <input
+          type="checkbox"
+          name="productName"
+          value="Winter Hanging Decor"
+        />
+        Winter Hanging Decor - $42
+      </label>
+      <img
+        src="<%= products[0].img %>"
+        alt="Winter Hanging Decor"
+        width="60px"
+        height="60px"
+        style="margin: 20px 15px auto auto"
+      />
+      <br />
+      <label>
+        <input type="checkbox" name="productName" value="Fall Hanging Decor" />
+        Fall Hanging Decor - $50
+      </label>
+      <img
+        src="<%= products[1].img %>"
+        alt="Winter Hanging Decor"
+        width="60px"
+        height="60px"
+        style="margin: 20px 15px auto auto"
+      />
+      <br />
+      <input type="submit" id="submitId" value="Add to Cart" />
+    </form>
+    <div class="displayClass" id="myCart">
+      <h1>My Cart</h1>
+      <ul>
+        <% Object.keys(cart).forEach(productName => { %>
+        <li><%= productName %> <%= cart[productName] %></li>
+        <% }); %>
+      </ul>
+      <h2>Total Price: <%= totalPrice %></h2>
+    </div>
+  </body>
+</html>

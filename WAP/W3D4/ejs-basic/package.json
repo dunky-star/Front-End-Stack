@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "name": "ejs-basic",
+  "version": "1.0.0",
+  "description": "EJS BASIC QUIZ",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Geoffrey Duncan Opiyo",
+  "license": "ISC"
+}

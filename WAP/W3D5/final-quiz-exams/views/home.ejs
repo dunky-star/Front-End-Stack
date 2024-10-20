@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><% pageTitle %></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#addToCartForm").submit(function () {
+        $("#myCart").show();
+      });
+    </script>
+    <style>
+      .displayClass {
+        visibility: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book a Ticket</h1>
+    <form action="/searchFlight" method="post" id="addToCartForm">
+      <label> Departure date: <input type="date" name="departureDate" /> </label
+      ><br /><br />
+      <label> Destination: </label>
+      <select name="destination" id="destination">
+        <option value="Fairfield">Fairfield</option>
+        <option value="Chicago">Chicago</option>
+      </select>
+      <br /><br />
+      <input type="submit" id="submitId" value="Search" />
+    </form>
+    <div class="displayClass" id="myCart">
+      <ul>
+        <% Object.keys(flight).forEach(departureDate => { %>
+        <li><%= departureDate %> <%= flight[departureDate] %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
+</html>
